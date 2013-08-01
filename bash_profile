@@ -62,3 +62,5 @@ fi
 unset RED YELLOW GREEN RESET
 
 set -o vi
+
+alias ls='ls -lah'
