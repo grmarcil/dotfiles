@@ -16,6 +16,6 @@ do
 
   if [ $shouldIgnore == false -a ! -L ~/.$filename ]
   then
-    ln -s $DIR/$filename ~/.filename
+    ln -sf $DIR/$filename ~/.$filename
   fi
 done
