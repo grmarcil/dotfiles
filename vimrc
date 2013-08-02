@@ -21,6 +21,7 @@ set rtp+=~/.vim/bundle/vundle/             " Add Vundle subdir to run time path
 call vundle#rc()                           " Enable vundle
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'puppetlabs/puppet-syntax-vim'
