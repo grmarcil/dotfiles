@@ -3,10 +3,7 @@ execute pathogen#infect()
 
 set nocompatible                " choose no compatibility with legacy vi
 set number
-se t_Co=16
 syntax enable
-set background=dark
-colorscheme solarized
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
