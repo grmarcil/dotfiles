@@ -30,6 +30,7 @@ Bundle 'bronson/vim-trailing-whitesapce'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-markdown'
 
 filetype plugin indent on       " (Re)enable filetype and indenting
 

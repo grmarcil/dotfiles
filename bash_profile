@@ -54,9 +54,9 @@ GREEN="\[\033[0;32m\]"
 RESET="\[\033[0;0;m\]"
 
 if [ -n "$SSH_CONNECTION" ]; then
-  PS1="\u $GREEN\w$RESET\$(__git_ps1 \" $RED(%s)$RESET\")[\h]\$ "
+  PS1="$GREEN\u \w$RESET\$(__git_ps1 \" $RED(%s)$RESET\")[\h]\$ "
 else
-  PS1="\u $GREEN\w$RESET\$(__git_ps1 \" $RED(%s)$RESET\")\$ "
+  PS1="$GREEN\u \w$RESET\$(__git_ps1 \" $RED(%s)$RESET\")\$ "
 fi
 
 unset RED YELLOW GREEN RESET
