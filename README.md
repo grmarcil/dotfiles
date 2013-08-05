@@ -1,8 +1,7 @@
 # Clone the repository into home directory and initialize
     git clone git@github.com:josephlogik/dotfiles.git
     cd dotfiles/
-    git submodule init
-    git submodule update
+    clone Vundle from github.com/gmarik/vundle
 
 # Setup links from home directory as appropriate
     ln -sf ~/dotfiles/bash_profile ~/.bash_profile
@@ -27,7 +26,7 @@
         #!/bin/sh
         $@
     sudo chmod 755 /usr/bin/xcrun
-    cd dotvim/bundle/command-t/ruby/command-t/
+    cd vim/bundle/command-t/ruby/command-t/
     rvm use system
     # (rvm installed 1.9.3 also known to work for OSX 10.7/10.8 and Ubuntu 10.04/12.04/12.10)
     ruby extconf.rb
