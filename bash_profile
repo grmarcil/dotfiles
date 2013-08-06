@@ -1,6 +1,6 @@
 # vi: set ft=sh :
 
-source ~/.bashrc #for integration with work puppet bashrc
+source ~/.bashrc # for integration with work puppet bashrc
 source ~/dotfiles/bash_completion.d/git-completion.bash
 source ~/dotfiles/bash_completion.d/git-prompt.sh
 source ~/dotfiles/bash_completion.d/tmux
@@ -11,7 +11,7 @@ if [ -z "$GIT_AUTHOR_NAME" ]; then
   source ~/dotfiles/bash/git_identity
 fi
 
-# terminal coloring
+# Terminal Coloring
 if [ "$COLORTERM" == "gnome-terminal" ]; then
 	export TERM="xterm-256color"
 fi
@@ -45,7 +45,7 @@ GIT_PS1_SHOWUNTRACKEDFILES="true"
 # of values: verbose       show number of commits ahead/behind (+/-) upstream
 GIT_PS1_SHOWUPSTREAM="verbose git"
 
-#Keep git autocompletion for g alias function
+# Keep git autocompletion for g alias function
 complete -o default -o nospace -F _git g
 
 RED="\[\033[0;31m\]"
@@ -63,4 +63,6 @@ unset RED YELLOW GREEN RESET
 
 set -o vi
 
-alias ls='ls -lah'
+# Aliases
+alias la='ls -lah'
+alias ls='ls -lh'
