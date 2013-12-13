@@ -1,4 +1,4 @@
-# ~/.tmuxinator/dev4.yml
+# ~/.tmuxinator/prod.yml
 
 name: prod
 root: ~/
