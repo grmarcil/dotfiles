@@ -1,18 +1,20 @@
-# ~/.tmuxinator/dev4.yml
+# ~/.tmuxinator/dev-4s.yml
 
-name: dev4
+name: dev-4s
 root: ~/
 
 windows:
-  - dev:
+  - dev-4s:
       layout: tiled
       panes:
         - 1:
           - ssh dev
           - cd frontend
+          - foreman start
         - 2:
           - ssh dev
           - cd backend
+          - foreman start
         - 3:
           - ssh dev
           - cd frontend

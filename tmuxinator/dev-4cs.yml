@@ -1,10 +1,10 @@
-# ~/.tmuxinator/dev4.yml
+# ~/.tmuxinator/dev-4cs.yml
 
-name: dev4
+name: dev-4cs
 root: ~/
 
 windows:
-  - dev:
+  - dev-4cs:
       layout: tiled
       panes:
         - 1:
@@ -18,6 +18,8 @@ windows:
         - 3:
           - ssh dev
           - cd frontend
+          - rails c
         - 4:
           - ssh dev
           - cd backend
+          - bin/logikcull console -E development

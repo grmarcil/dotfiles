@@ -1,17 +1,17 @@
-# ~/.tmuxinator/dev4.yml
+# ~/.tmuxinator/dev-c.yml
 
-name: dev
+name: dev-c
 root: ~/
 
 windows:
-  - dev:
+  - dev-c:
       layout: even-horizontal
       panes:
         - 1:
           - ssh dev
           - cd frontend
-          - foreman start
+          - rails c
         - 2:
           - ssh dev
           - cd backend
-          - foreman start
+          - bin/logikcull console -E development

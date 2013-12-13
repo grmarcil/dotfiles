@@ -1,4 +1,4 @@
-# ~/.tmuxinator/dev4.yml
+# ~/.tmuxinator/dev.yml
 
 name: dev
 root: ~/

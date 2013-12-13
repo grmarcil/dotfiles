@@ -1,10 +1,10 @@
-# ~/.tmuxinator/dev4.yml
+# ~/.tmuxinator/dev-4c.yml
 
-name: dev4
+name: dev-4c
 root: ~/
 
 windows:
-  - dev:
+  - dev-4c:
       layout: tiled
       panes:
         - 1:
