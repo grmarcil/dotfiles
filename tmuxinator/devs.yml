@@ -1,0 +1,17 @@
+# ~/.tmuxinator/dev4.yml
+
+name: dev
+root: ~/
+
+windows:
+  - dev:
+      layout: even-horizontal
+      panes:
+        - 1:
+          - ssh dev
+          - cd frontend
+          - foreman start
+        - 2:
+          - ssh dev
+          - cd backend
+          - foreman start
