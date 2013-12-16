@@ -1,6 +1,6 @@
-# ~/.tmuxinator/dev4.yml
+# ~/.tmuxinator/integ.yml
 
-name: prod
+name: integ
 root: ~/
 
 windows:
