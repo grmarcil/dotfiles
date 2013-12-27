@@ -1,0 +1,15 @@
+# ~/.tmuxinator/2dev.yml
+
+name: 2dev
+root: ~/
+
+windows:
+  - dev:
+      layout: even-horizontal
+      panes:
+        - 1:
+          - ssh dev
+          - cd frontend
+        - 2:
+          - ssh dev
+          - cd backend
