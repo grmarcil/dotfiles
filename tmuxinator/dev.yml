@@ -4,8 +4,8 @@ name: dev
 root: ~/
 
 windows:
-  - consoles:
-      layout: tiled
+  - frontend:
+      layout: even-vertical
       panes:
         - 1:
           - ssh dev
@@ -13,13 +13,16 @@ windows:
           - foreman start
         - 2:
           - ssh dev
-          - cd backend
-          - foreman start
-        - 3:
-          - ssh dev
           - cd frontend
           - rails c
-        - 4:
+  - backend:
+      layout: even-vertical
+      panes:
+        - 1:
+          - ssh dev
+          - cd backend
+          - foreman start
+        - 2:
           - ssh dev
           - cd backend
           - bin/logikcull console -E development
