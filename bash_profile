@@ -61,7 +61,7 @@ fi
 
 unset RED YELLOW GREEN RESET
 
-set -o -vi
+set -o vi
 
 # Aliases
 alias la='ls -lah'
