@@ -10,7 +10,7 @@ windows:
         - 1:
           - ssh dev
           - cd frontend
-          - foreman start
+          - rails s
         - 2:
           - ssh dev
           - cd frontend
