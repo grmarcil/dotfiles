@@ -1,4 +1,4 @@
 # vi: set ft=sh :
 
-export PATH=$PATH:~/bin
+export PATH=/usr/local/vin:$PATH:~/bin
 export EDITOR=/usr/bin/vim
