@@ -3,11 +3,9 @@
 	"installed_packages":
 	[
 		"Alternative Autocompletion",
-		"ERB Snippets",
 		"Package Control",
-		"RubyTest",
+		"SideBarEnhancements",
 		"Solarized Color Scheme",
-		"SublimeERB",
-		"Theme - Spacegray"
+		"SublimeERB"
 	]
 }
