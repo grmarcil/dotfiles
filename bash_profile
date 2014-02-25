@@ -66,3 +66,4 @@ set -o vi
 # Aliases
 alias la='ls -lah'
 alias ls='ls -lh'
+export PATH=/usr/local/bin:/usr/local/share/python:$PATH
