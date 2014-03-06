@@ -25,7 +25,7 @@ windows:
         - 2:
           - ssh dev
           - cd backend
-          - bin/logikcull console -E development
+          - redis-server
   - dirs:
       layout: even-horizontal
       panes:
@@ -35,3 +35,15 @@ windows:
         - 2:
           - ssh dev
           - cd backend
+  - optional:
+      layout: even-vertical
+      panes:
+        - 1:
+          - ssh dev
+          - cd frontend
+          - echo 'mailcatcher'
+        - 2:
+          - ssh dev
+          - cd frontend
+          - cat Procfile
+          - echo 'delayed job'
