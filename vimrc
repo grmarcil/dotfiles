@@ -20,8 +20,9 @@ filetype off                               " Disable for Vundle load
 set rtp+=~/.vim/bundle/vundle/             " Add Vundle subdir to run time path
 call vundle#rc()                           " Enable vundle
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-fugitive'
 "Bundle 'git://git.wincent.com/command-t.git'
-"Bundle 'tpope/vim-fugitive'
 "Bundle 'scrooloose/syntastic'
 "Bundle 'puppetlabs/puppet-syntax-vim'
 "Bundle 'jeffkreeftmeijer/vim-numbertoggle'
@@ -30,16 +31,16 @@ Bundle 'altercation/vim-colors-solarized'
 "Bundle 'tpope/vim-rails'
 "Bundle 'tpope/vim-surround'
 "Bundle 'tpope/vim-markdown'
+let g:airline_powerline_fonts = 1
 
 filetype plugin indent on       " (Re)enable filetype and indenting
 
 "==============================================================================
 " Basic Options
 "------------------------------------------------------------------------------
-set encoding=utf-8
 let mapleader=","               " Remapped from \"
-set laststatus=2                " Always show status bar for powerline
-let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set laststatus=2                " Always show status bar
 set showcmd                     " display incomplete commands
 
 "==============================================================================
