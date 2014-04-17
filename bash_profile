@@ -11,12 +11,7 @@ if [ -z "$GIT_AUTHOR_NAME" ]; then
   source ~/dotfiles/bash/git_identity
 fi
 
-# Terminal Coloring
-if [ "$COLORTERM" == "gnome-terminal" ]; then
-	export TERM="xterm-256color"
-fi
 export CLICOLOR=1
-export LSCOLORS=dxfxxxxxbxegedbxbxdxdx
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
@@ -61,9 +56,3 @@ fi
 
 unset RED YELLOW GREEN RESET
 
-set -o vi
-
-# Aliases
-alias la='ls -lah'
-alias ls='ls -lh'
-export PATH=/usr/local/bin:/usr/local/share/python:$PATH
