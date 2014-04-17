@@ -5,7 +5,8 @@ alias h=history
 alias hgrep='history | grep'
 
 alias l='ls'
-alias ll='ls -alh'
+alias ll='ls -lh'
+alias la='ls -alh'
 
 alias g=git
 alias s='git status'
@@ -14,10 +15,10 @@ alias a='git add'
 alias c='git commit'
 
 if [[ ( $OSTYPE == darwin* ) ]]; then
-	alias vim='mvim -v'
 	alias tmux='~/dotfiles/tmux_wrapper'
 fi
 
+alias eb='vim ~/dotfiles/bash_profile'
 alias ev='vim ~/.vimrc'
 alias ea='vim -v ~/dotfiles/bash/aliases && reload'
 alias eg='vim ~/.gitconfig'
