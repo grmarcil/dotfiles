@@ -22,16 +22,19 @@ call vundle#rc()                           " Enable vundle
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'bronson/vim-trailing-whitespace'
 "Bundle 'git://git.wincent.com/command-t.git'
-"Bundle 'scrooloose/syntastic'
 "Bundle 'puppetlabs/puppet-syntax-vim'
-"Bundle 'jeffkreeftmeijer/vim-numbertoggle'
-"Bundle 'bronson/vim-trailing-whitespace'
 "Bundle 'tpope/vim-endwise'
 "Bundle 'tpope/vim-rails'
-"Bundle 'tpope/vim-surround'
 "Bundle 'tpope/vim-markdown'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#whitespace#enabled = 1
 
 filetype plugin indent on       " (Re)enable filetype and indenting
 
@@ -42,6 +45,11 @@ let mapleader=","               " Remapped from \"
 set encoding=utf-8
 set laststatus=2                " Always show status bar
 set showcmd                     " display incomplete commands
+set hidden
+set wildmenu
+set wildmode=list:longest,full
+set wildignorecase
+
 
 "==============================================================================
 " Search Options
@@ -55,6 +63,7 @@ set smartcase                   " unless they contain at least one capital lette
 " Key Mappings
 "------------------------------------------------------------------------------
 inoremap jj <Esc>
+nnoremap <leader>l :ls<cr>:b<space>
 
 "==============================================================================
 " Appearance Options
@@ -66,6 +75,9 @@ set nowrap                      " don't wrap lines
 set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
+if exists('+colorcolumn') " Marks the 80th character column
+    set colorcolumn=80
+endif
 colorscheme solarized
 
 " set the cursor to a vertical line in insert mode and a solid block in command mode
