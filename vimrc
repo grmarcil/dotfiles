@@ -79,6 +79,7 @@ if exists('+colorcolumn') " Marks the 80th character column
     set colorcolumn=80
 endif
 colorscheme solarized
+set background=dark
 
 " set the cursor to a vertical line in insert mode and a solid block in command mode
 if exists('$TMUX')
