@@ -4,10 +4,12 @@
 	[
 		"Alternative Autocompletion",
 		"Package Control",
+		"Sass",
 		"SideBarEnhancements",
 		"Solarized Color Scheme",
 		"SublimeERB",
 		"SublimeLinter",
-		"SublimeLinter-jshint"
+		"SublimeLinter-jshint",
+		"TrailingSpaces"
 	]
 }
