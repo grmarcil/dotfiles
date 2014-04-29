@@ -25,10 +25,10 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'bronson/vim-trailing-whitespace'
 "Bundle 'git://git.wincent.com/command-t.git'
-"Bundle 'puppetlabs/puppet-syntax-vim'
 "Bundle 'tpope/vim-endwise'
 "Bundle 'tpope/vim-rails'
 "Bundle 'tpope/vim-markdown'
@@ -62,8 +62,14 @@ set smartcase                   " unless they contain at least one capital lette
 "==============================================================================
 " Key Mappings
 "------------------------------------------------------------------------------
+" Easy esc mapping
 inoremap jj <Esc>
+" Vim&Vigor buffer switching jetpack
 nnoremap <leader>l :ls<cr>:b<space>
+" Nerdtree shortcut
+nmap <leader>nt :NERDTree<cr>
+" Kill search highlighting
+nnoremap <leader><space> :noh<cr>
 
 "==============================================================================
 " Appearance Options
