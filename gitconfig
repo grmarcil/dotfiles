@@ -1,7 +1,7 @@
 [push]
 	default = upstream
 [core]
-	editor = /usr/bin/vim
+	editor = vim
 	excludesfile = ~/dotfiles/gitignore_global
 	autocrlf = input
 [color]
