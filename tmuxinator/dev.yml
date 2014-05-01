@@ -4,6 +4,21 @@ name: dev
 root: ~/
 
 windows:
+  - vim:
+      panes:
+        - 1:
+          - ssh dev
+          - cd frontend/app
+          - vim
+  - dirs:
+      layout: even-horizontal
+      panes:
+        - 1:
+          - ssh dev
+          - cd frontend
+        - 2:
+          - ssh dev
+          - cd backend
   - frontend:
       layout: even-vertical
       panes:
@@ -26,15 +41,6 @@ windows:
           - ssh dev
           - cd backend
           - redis-server
-  - dirs:
-      layout: even-horizontal
-      panes:
-        - 1:
-          - ssh dev
-          - cd frontend
-        - 2:
-          - ssh dev
-          - cd backend
   - optional:
       layout: even-vertical
       panes:
