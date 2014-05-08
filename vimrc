@@ -29,7 +29,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'rbgrouleff/bclose.vim'
+Bundle 'moll/vim-bbye'
 "Bundle 'git://git.wincent.com/command-t.git'
 "Bundle 'tpope/vim-endwise'
 "Bundle 'tpope/vim-rails'
@@ -68,13 +68,15 @@ set smartcase                   " unless they contain at least one capital lette
 " Easy esc mapping
 inoremap jj <Esc>
 " Vim&Vigor buffer switching jetpack
-nnoremap <leader>l :ls<cr>:b<space>
+nnoremap <leader>l :ls<CR>:b<space>
 " Nerdtree shortcut
-nnoremap <leader>nt :NERDTree<cr>
+nnoremap <leader>nt :NERDTree<CR>
+" BDelete to close buffers but not windows
+nnoremap <leader>bd :Bdelete<CR>
 " FixWhitespace shortcut
-nnoremap <leader>W :FixWhitespace<cr>
+nnoremap <leader>W :FixWhitespace<CR>
 " Kill search highlighting
-nnoremap <silent> <leader><space> :noh<cr>
+nnoremap <silent> <leader><space> :noh<CR>
 
 "==============================================================================
 " Appearance Options
