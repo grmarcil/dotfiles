@@ -49,6 +49,7 @@ set hidden
 set wildmenu
 set wildmode=list:longest,full
 set wildignorecase
+set scrolloff=1
 
 
 "==============================================================================
@@ -67,9 +68,11 @@ inoremap jj <Esc>
 " Vim&Vigor buffer switching jetpack
 nnoremap <leader>l :ls<cr>:b<space>
 " Nerdtree shortcut
-nmap <leader>nt :NERDTree<cr>
+nnoremap <leader>nt :NERDTree<cr>
+" FixWhitespace shortcut
+nnoremap <leader>W :FixWhitespace<cr>
 " Kill search highlighting
-nnoremap <leader><space> :noh<cr>
+nnoremap <silent> <leader><space> :noh<cr>
 
 "==============================================================================
 " Appearance Options
