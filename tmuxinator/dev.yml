@@ -10,6 +10,12 @@ windows:
           - ssh dev
           - cd frontend/app
           - vim
+  - js:
+      panes:
+        - 1:
+          - ssh dev
+          - cd frontend/app/assets/javascripts
+          - vim
   - dirs:
       layout: even-horizontal
       panes:
