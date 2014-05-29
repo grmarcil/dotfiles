@@ -24,9 +24,9 @@ Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-commentary'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
-Bundle 'tomtom/tcomment_vim'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'moll/vim-bbye'
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -69,7 +69,7 @@ inoremap jj <Esc>
 " Vim&Vigor buffer switching jetpack
 nnoremap <leader>l :ls<CR>:b<space>
 " Nerdtree shortcut
-nnoremap <leader>nt :NERDTree<CR>
+nnoremap <leader>nt :NERDTreeToggle<CR>
 " BDelete to close buffers but not windows
 nnoremap <leader>bd :Bdelete<CR>
 " FixWhitespace shortcut
