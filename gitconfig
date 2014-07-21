@@ -20,3 +20,5 @@
 	br   = branch
 	undo = reset HEAD@{1}
 
+[merge]
+	tool = vimdiff
