@@ -44,6 +44,7 @@ filetype plugin indent on       " (Re)enable filetype and indenting
 "------------------------------------------------------------------------------
 let mapleader=","               " Remapped from \"
 set encoding=utf-8
+set lazyredraw                  " Don't redraw while executing macros
 set laststatus=2                " Always show status bar
 set showcmd                     " display incomplete commands
 set hidden
@@ -52,6 +53,11 @@ set wildmode=list:longest,full
 set wildignorecase
 set scrolloff=1
 
+"==============================================================================
+" Layout Options
+"------------------------------------------------------------------------------
+set splitbelow                  " open splits below rather than above
+set splitright                  " open splits right rather than left
 
 "==============================================================================
 " Search Options
