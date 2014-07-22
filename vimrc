@@ -68,22 +68,6 @@ set ignorecase                  " searches are case insensitive...
 set smartcase                   " unless they contain at least one capital letter
 
 "==============================================================================
-" Key Mappings
-"------------------------------------------------------------------------------
-" Easy esc mapping
-inoremap jj <Esc>
-" Vim&Vigor buffer switching jetpack
-nnoremap <leader>l :ls<CR>:b<space>
-" Nerdtree shortcut
-nnoremap <leader>nt :NERDTreeToggle<CR>
-" BDelete to close buffers but not windows
-nnoremap <leader>bd :Bdelete<CR>
-" FixWhitespace shortcut
-nnoremap <leader>W :FixWhitespace<CR>
-" Kill search highlighting
-nnoremap <silent> <leader><space> :noh<CR>
-
-"==============================================================================
 " Appearance Options
 "------------------------------------------------------------------------------
 syntax on
@@ -107,4 +91,20 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+
+"==============================================================================
+" Key Mappings
+"------------------------------------------------------------------------------
+" Easy esc mapping
+inoremap jj <Esc>
+" Vim&Vigor buffer switching jetpack
+nnoremap <leader>l :ls<CR>:b<space>
+" Nerdtree shortcut
+nnoremap <leader>nt :NERDTreeToggle<CR>
+" BDelete to close buffers but not windows
+nnoremap <leader>bd :Bdelete<CR>
+" FixWhitespace shortcut
+nnoremap <leader>W :FixWhitespace<CR>
+" Kill search highlighting
+nnoremap <silent> <leader><space> :noh<CR>
 
