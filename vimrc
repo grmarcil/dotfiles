@@ -25,16 +25,15 @@ Plugin 'gmarik/Vundle.vim'                 " Let vundle manage vundle
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'                 " Vim status/buffer line
 Plugin 'tpope/vim-fugitive'                " Git wrapper
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-commentary'
-Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-surround'                " Manage surrounding marks, tags
+Plugin 'tpope/vim-repeat'                  " Support repeat for plugin actions
+Plugin 'tpope/vim-commentary'              " Manage comments
+Plugin 'scrooloose/syntastic'              " Linter
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'moll/vim-bbye'                    " better buffer closing
-"Plugin 'git://git.wincent.com/command-t.git'
-"Plugin 'tpope/vim-endwise'
+Plugin 'moll/vim-bbye'                     " Better buffer closing
+"Plugin 'sjl/gundo.vim'                     "Could be interesting later
 "Plugin 'tpope/vim-rails'
 "Plugin 'tpope/vim-markdown'
 let g:airline_powerline_fonts = 1
