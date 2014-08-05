@@ -19,6 +19,9 @@ filetype on                                " Enable it first for git exit code
 filetype off                               " Disable for Vundle load
 set rtp+=~/.vim/bundle/vundle/             " Add Vundle subdir to run time path
 call vundle#rc()                           " Enable vundle
+
+Plugin 'gmarik/Vundle.vim'                 " Let vundle manage vundle
+
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'                 " Vim status/buffer line
 Plugin 'tpope/vim-fugitive'                " Git wrapper
