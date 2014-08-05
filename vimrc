@@ -19,20 +19,20 @@ filetype on                                " Enable it first for git exit code
 filetype off                               " Disable for Vundle load
 set rtp+=~/.vim/bundle/vundle/             " Add Vundle subdir to run time path
 call vundle#rc()                           " Enable vundle
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-commentary'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'moll/vim-bbye'
-"Bundle 'git://git.wincent.com/command-t.git'
-"Bundle 'tpope/vim-endwise'
-"Bundle 'tpope/vim-rails'
-"Bundle 'tpope/vim-markdown'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'                 " Vim status/buffer line
+Plugin 'tpope/vim-fugitive'                " Git wrapper
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'moll/vim-bbye'                    " better buffer closing
+"Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'tpope/vim-endwise'
+"Plugin 'tpope/vim-rails'
+"Plugin 'tpope/vim-markdown'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
