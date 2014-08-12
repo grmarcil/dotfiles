@@ -34,8 +34,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'moll/vim-bbye'                     " Better buffer closing
 Plugin 'pangloss/vim-javascript'
-Plugin 'xolox/vim-notes'                   " Note taking plugin
-Plugin 'xolox/vim-misc'                    " Dependency of vim-notes
 "Plugin 'sjl/gundo.vim'                     "Could be interesting later
 "Plugin 'tpope/vim-rails'
 "Plugin 'tpope/vim-markdown'
@@ -118,12 +116,4 @@ nnoremap <silent> <leader><space> :noh<CR>
 " File Type Options
 "------------------------------------------------------------------------------
 au BufNewFile,BufRead *.ejs set filetype=html
-
-"==============================================================================
-" Plugin-specific Options
-"------------------------------------------------------------------------------
-let g:notes_directories = ['~/notes']
-let g:notes_suffix = '.txt'
-let g:notes_title_sync = 'change_title'
-let g:notes_smart_quotes = 0
 
