@@ -33,6 +33,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'moll/vim-bbye'                     " Better buffer closing
+Plugin 'pangloss/vim-javascript'
 "Plugin 'sjl/gundo.vim'                     "Could be interesting later
 "Plugin 'tpope/vim-rails'
 "Plugin 'tpope/vim-markdown'
@@ -110,4 +111,9 @@ nnoremap <leader>bd :Bdelete<CR>
 nnoremap <leader>W :FixWhitespace<CR>
 " Kill search highlighting
 nnoremap <silent> <leader><space> :noh<CR>
+
+"==============================================================================
+" File Type Options
+"------------------------------------------------------------------------------
+au BufNewFile,BufRead *.ejs set filetype=html
 
