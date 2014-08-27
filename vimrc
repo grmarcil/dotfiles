@@ -85,7 +85,7 @@ if exists('+colorcolumn') " Marks the 80th character column
     set colorcolumn=80
 endif
 colorscheme solarized
-set background=dark
+set background=light
 
 " set the cursor to a vertical line in insert mode and a solid block in command mode
 if exists('$TMUX')
@@ -101,6 +101,9 @@ endif
 "------------------------------------------------------------------------------
 " Easy esc mapping
 inoremap jj <Esc>
+" Edit/source vimrc
+nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
+nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 " Vim&Vigor buffer switching jetpack
 nnoremap <leader>l :ls<CR>:b<space>
 " Nerdtree shortcut
