@@ -79,6 +79,7 @@ set relativenumber
 set number
 set nowrap                      " don't wrap lines
 set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
+set shiftround                  " use even multiples of shiftwidth with >
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 if exists('+colorcolumn') " Marks the 80th character column
