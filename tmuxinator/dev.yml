@@ -7,55 +7,45 @@ windows:
   - vim:
       panes:
         - 1:
-          - ssh dev
           - cd frontend/app
           - vim
   - js:
       panes:
         - 1:
-          - ssh dev
           - cd frontend/app/assets/javascripts
           - vim
   - dirs:
       layout: even-horizontal
       panes:
         - 1:
-          - ssh dev
           - cd frontend
         - 2:
-          - ssh dev
           - cd backend
   - frontend:
       layout: even-vertical
       panes:
         - 1:
-          - ssh dev
           - cd frontend
           - rails s
         - 2:
-          - ssh dev
           - cd frontend
           - rails c
   - backend:
       layout: even-vertical
       panes:
         - 1:
-          - ssh dev
           - cd backend
           - foreman start
         - 2:
-          - ssh dev
           - cd backend
           - redis-server
   - optional:
       layout: even-vertical
       panes:
         - 1:
-          - ssh dev
           - cd frontend
           - echo 'mailcatcher'
         - 2:
-          - ssh dev
           - cd frontend
           - cat Procfile
           - echo 'delayed job'
