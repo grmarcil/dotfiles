@@ -125,13 +125,13 @@ au BufNewFile,BufRead *.ejs set filetype=html
 "==============================================================================
 " Commands
 "------------------------------------------------------------------------------
-:command Numtog :call NumberToggle()
+:command! Numtog :call NumberToggle()
 
 
 "==============================================================================
 " Functions
 "------------------------------------------------------------------------------
-function NumberToggle()
+function! NumberToggle()
   if(&relativenumber == 1 || &number == 1)
     set norelativenumber
     set nonumber
