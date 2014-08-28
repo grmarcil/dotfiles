@@ -85,7 +85,7 @@ if exists('+colorcolumn') " Marks the 80th character column
     set colorcolumn=80
 endif
 colorscheme solarized
-set background=dark
+set background=light
 
 " set the cursor to a vertical line in insert mode and a solid block in command mode
 if exists('$TMUX')
@@ -116,4 +116,24 @@ nnoremap <silent> <leader><space> :noh<CR>
 " File Type Options
 "------------------------------------------------------------------------------
 au BufNewFile,BufRead *.ejs set filetype=html
+
+
+"==============================================================================
+" Commands
+"------------------------------------------------------------------------------
+:command Numtog :call NumberToggle()
+
+
+"==============================================================================
+" Functions
+"------------------------------------------------------------------------------
+function NumberToggle()
+  if(&relativenumber == 1 || &number == 1)
+    set norelativenumber
+    set nonumber
+  else
+    set relativenumber
+    set number
+  end
+endfunc
 
