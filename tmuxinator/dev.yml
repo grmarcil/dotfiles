@@ -12,7 +12,7 @@ windows:
   - js:
       panes:
         - 1:
-          - cd frontend/app/assets/javascripts
+          - cd frontend/app/assets/javascripts/apps
           - vim
   - dirs:
       layout: even-horizontal
