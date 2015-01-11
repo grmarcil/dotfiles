@@ -31,7 +31,6 @@ Plugin 'tpope/vim-repeat'                  " Support repeat for plugin actions
 Plugin 'tpope/vim-commentary'              " Manage comments
 Plugin 'scrooloose/syntastic'              " Linter
 Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'moll/vim-bbye'                     " Better buffer closing
 Plugin 'pangloss/vim-javascript'
