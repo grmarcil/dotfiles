@@ -55,7 +55,8 @@ set hidden
 set wildmenu
 set wildmode=list:longest,full
 set wildignorecase
-set scrolloff=1
+set scrolloff=1                 " At least 1 visible line above/below cursor
+set mouse=a
 
 "==============================================================================
 " Layout Options
@@ -127,6 +128,7 @@ au BufNewFile,BufRead *.ejs set filetype=html
 " Commands
 "------------------------------------------------------------------------------
 :command! Numtog :call NumberToggle()
+:command! BuffDiff :call FileBuffDiff()
 
 
 "==============================================================================
@@ -140,5 +142,11 @@ function! NumberToggle()
     set relativenumber
     set number
   end
+endfunc
+
+" Shows diff between buffer and file on disk
+" Nice for when you have buffer changes and pulled in remote changes from git
+function! FileBuffDiff()
+  :w !diff % -
 endfunc
 
