@@ -1,0 +1,24 @@
+# ~/.tmuxinator/fe.yml
+
+name: fe
+root: ~/
+
+windows:
+  - app:
+      panes:
+        - 1:
+          - cd frontend/app
+          - vim
+  - js:
+      panes:
+        - 1:
+          - cd frontend/app/assets/javascripts/apps
+          - vim
+  - dirs:
+      layout: even-horizontal
+      panes:
+        - 1:
+          - cd frontend
+        - 2:
+          - cd backend
+
