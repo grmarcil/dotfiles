@@ -34,7 +34,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'moll/vim-bbye'                     " Better buffer closing
 Plugin 'pangloss/vim-javascript'
-"Plugin 'sjl/gundo.vim'                     "Could be interesting later
+Plugin 'tmhedberg/matchit'                 " Extends % matching
+"Plugin 'sjl/gundo.vim'                    " Could be interesting later
 "Plugin 'tpope/vim-rails'
 "Plugin 'tpope/vim-markdown'
 let g:airline_powerline_fonts = 1
