@@ -47,7 +47,7 @@ filetype plugin indent on       " (Re)enable filetype and indenting
 "==============================================================================
 " Basic Options
 "------------------------------------------------------------------------------
-let mapleader=","               " Remapped from \"
+let mapleader="\<space>"        " Remapped from \"
 set encoding=utf-8
 set lazyredraw                  " Don't redraw while executing macros
 set laststatus=2                " Always show status bar
@@ -107,8 +107,10 @@ endif
 "------------------------------------------------------------------------------
 " Easy esc mapping
 inoremap jj <Esc>
+" Quick save
+nnoremap <leader>w :w<CR>
 " Edit/source vimrc
-nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
+nnoremap <silent> <leader>vim :e $MYVIMRC<CR>
 nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 " Vim&Vigor buffer switching jetpack
 nnoremap <leader>l :ls<CR>:b<space>
@@ -119,7 +121,7 @@ nnoremap <leader>bd :Bdelete<CR>
 " FixWhitespace shortcut
 nnoremap <leader>W :FixWhitespace<CR>
 " Kill search highlighting
-nnoremap <silent> <leader><space> :noh<CR>
+nnoremap <silent> <leader>h :noh<CR>
 
 "==============================================================================
 " File Type Options
