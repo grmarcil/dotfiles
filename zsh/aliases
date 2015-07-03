@@ -1,12 +1,8 @@
 # vi: set ft=sh :
 
-alias reload='source ~/dotfiles/bash/aliases'
+alias reload='source ~/dotfiles/zsh/aliases'
 alias h=history
 alias hgrep='history | grep'
-
-alias l='ls'
-alias ll='ls -GFlh'
-alias la='ls -GFalh'
 
 alias g=git
 alias s='git status'
@@ -28,3 +24,21 @@ alias be='cd ~/backend'
 alias de='cd ~/deploy'
 alias dot='cd ~/dotfiles'
 
+# -------------------------------------------------------------------
+# directory information
+# -------------------------------------------------------------------
+if [[ $IS_MAC -eq 1 ]]; then
+    alias l='ls -al'
+    alias ll='ls -GFhl'  # Colorize output, add file type indicator, and put sizes in human readable format
+    alias la='ls -GFlah' # Same as above, but show all
+    alias lh='ls -d .*' # show hidden files/directories only
+fi
+if [[ $IS_LINUX -eq 1 ]]; then
+    alias l='ls -al --color'
+    alias ll='ls -Fhl --color' # Same as above, but in long listing format
+    alias la='ls -Flah --color' # Colorize output, add file type indicator, and put sizes in human readable format
+    alias lh='ls -d .* --color' # show hidden files/directories only
+fi
+
+alias lsd="ls -ld *" # show directories
+alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
