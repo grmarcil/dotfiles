@@ -1,0 +1,30 @@
+# vi: set ft=sh :
+
+alias reload='source ~/dotfiles/bash/aliases'
+alias h=history
+alias hgrep='history | grep'
+
+alias l='ls'
+alias ll='ls -GFlh'
+alias la='ls -GFalh'
+
+alias g=git
+alias s='git status'
+alias d='git diff'
+alias a='git add'
+alias c='git commit'
+
+if [[ ( $OSTYPE == darwin* ) ]]; then
+	alias tmux='~/dotfiles/tmux_wrapper'
+fi
+
+alias ez='vim ~/dotfiles/zshrc'
+alias ev='vim ~/.vimrc'
+alias ea='vim -v ~/dotfiles/zsh/aliases && reload'
+alias eg='vim ~/.gitconfig'
+
+alias fe='cd ~/frontend'
+alias be='cd ~/backend'
+alias de='cd ~/deploy'
+alias dot='cd ~/dotfiles'
+

@@ -1,0 +1,9 @@
+# vi: set ft=sh :
+
+# HISTORY
+HISTSIZE=5000
+SAVEHIST=5000
+HISTFILE=~/.zsh_history
+
+# looks interesting for later https://github.com/zsh-users/zaw
+# bindkey '^R' zaw-history
