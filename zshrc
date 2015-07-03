@@ -9,7 +9,6 @@ source ~/dotfiles/zsh/completion
 source ~/dotfiles/zsh/aliases
 source ~/dotfiles/zsh/bindkeys
 source ~/dotfiles/zsh/history
-source ~/dotfiles/zsh/zsh_hooks
 # source ~/src/zaw/zaw
 
 precmd() {
