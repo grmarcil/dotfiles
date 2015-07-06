@@ -1,13 +1,5 @@
 # vi: set ft=sh :
 
-function virtualenv_info {
-    [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
-}
-
-function box_name {
-    [ -f ~/.box-name ] && cat ~/.box-name || hostname -s
-}
-
 # http://blog.joshdick.net/2012/12/30/my_git_prompt_for_zsh.html
 # copied from https://gist.github.com/4415470
 # Adapted from code found at <https://gist.github.com/1712320>.
@@ -69,25 +61,18 @@ function parse_git_state() {
 
 }
 
-
 # If inside a Git repository, print its branch and state
 function git_prompt_string() {
   local git_where="$(parse_git_branch)"
   [ -n "$git_where" ] && echo "(${git_where#(refs/heads/|tags/)}$(parse_git_state))"
 }
 
-function current_pwd {
-  echo $(pwd | sed -e "s,^$HOME,~,")
-}
-
-PROMPT='${PR_GREEN}%n $(current_pwd)%{$reset_color%} ${PR_BLUE}$(git_prompt_string)%{$reset_color%}\$ '
-
-export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
+PROMPT='${PR_GREEN}%~%{$reset_color%} ${PR_BLUE}$(git_prompt_string)%{$reset_color%}\$ '
 
 # Setup Vi-mode indicator in right-prompt
 function zle-line-init zle-keymap-select {
   VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-  RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}${PR_GREEN}$(virtualenv_info)%{$reset_color%} ${PR_RED}${ruby_version}%{$reset_color%} $EPS1"
+  RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}${PR_GREEN}%{$reset_color%} ${PR_RED}${ruby_version}%{$reset_color%} $EPS1"
   zle reset-prompt
 }
 
