@@ -67,7 +67,12 @@ function git_prompt_string() {
   [ -n "$git_where" ] && echo "(${git_where#(refs/heads/|tags/)}$(parse_git_state))"
 }
 
-PROMPT='${PR_GREEN}%~%{$reset_color%} ${PR_BLUE}$(git_prompt_string)%{$reset_color%}\$ '
+# If connected through SSH, print the host name
+function ssh_host_name_string() {
+  [ -n "$SSH_CONNECTION" ] && echo " %M"
+}
+
+PROMPT='${PR_GREEN}%~$(ssh_host_name_string)%{$reset_color%} ${PR_BLUE}$(git_prompt_string)%{$reset_color%}\$ '
 
 # Setup Vi-mode indicator in right-prompt
 function zle-line-init zle-keymap-select {
