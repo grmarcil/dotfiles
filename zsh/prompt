@@ -69,10 +69,10 @@ function git_prompt_string() {
 
 # If connected through SSH, print the host name
 function ssh_host_name_string() {
-  [ -n "$SSH_CONNECTION" ] && echo " %M"
+  [ -n "$SSH_CONNECTION" ] && echo "[%M] "
 }
 
-PROMPT='${PR_GREEN}%~$(ssh_host_name_string)%{$reset_color%} ${PR_BLUE}$(git_prompt_string)%{$reset_color%}\$ '
+PROMPT='${PR_GREEN}$(ssh_host_name_string)%~%{$reset_color%} ${PR_BLUE}$(git_prompt_string)%{$reset_color%}\$ '
 
 # Setup Vi-mode indicator in right-prompt
 function zle-line-init zle-keymap-select {
