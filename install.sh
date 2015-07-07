@@ -1,6 +1,6 @@
 #! /bin/bash
 DIR=~/dotfiles
-ignore=( scripts backups install.sh sublime)
+ignore=(install.sh)
 
 cd $DIR
 for filename in *
