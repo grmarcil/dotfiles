@@ -1,6 +1,6 @@
 #! /bin/bash
 DIR=~/dotfiles
-ignore=(install.sh)
+ignore=(README.md install.sh .git .gitignore .gitmodules)
 
 cd $DIR
 for filename in *

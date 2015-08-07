@@ -17,10 +17,10 @@ set nocompatible
 "------------------------------------------------------------------------------
 filetype on                                " Enable it first for git exit code
 filetype off                               " Disable for Vundle load
-set rtp+=~/.vim/bundle/vundle/             " Add Vundle subdir to run time path
+set rtp+=~/.vim/bundle/Vundle.vim             " Add Vundle subdir to run time path
 call vundle#rc()                           " Enable vundle
 
-Plugin 'gmarik/Vundle.vim'                 " Let vundle manage vundle
+Plugin 'VundleVim/Vundle.vim'              " Let vundle manage vundle
 
 Plugin 'christoomey/vim-tmux-navigator'    " See readme for tmux.conf reqs
 Plugin 'altercation/vim-colors-solarized'
