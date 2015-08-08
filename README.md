@@ -1,22 +1,13 @@
 # Clone the repository into home directory and initialize
-    git clone git@github.com:josephlogik/dotfiles.git
+    git clone git@github.com:grmarcil/dotfiles.git
     cd dotfiles/
-    clone Vundle from github.com/gmarik/vundle
+    clone Vundle from github.com/VundleVim/Vundle.vim
 
-# Setup links from home directory as appropriate
-    ln -sf ~/dotfiles/bash_profile ~/.bash_profile
-    ln -sf ~/dotfiles/bashrc       ~/.bashrc
-    ln -sf ~/dotfiles/vimrc        ~/.vimrc
-    ln -sf ~/dotfiles/gvimrc       ~/.gvimrc
-    ln -sf ~/dotfiles/dotvim/      ~/.vim
-    ln -sf ~/dotfiles/tmux.conf    ~/.tmux.conf
-    ln -sf ~/dotfiles/ackrc        ~/.ackrc
-    ln -sf ~/dotfiles/gitconfig    ~/.gitconfig
-    ln -sf ~/dotfiles/bash/inputrc ~/.inputrc
-    ln -sf ~/dotfiles/gemrc        ~/.gemrc
+# Setup links with install.sh
+    bash install.sh
 
 # Inside of vim, run
-    :BundleInstall
+    :PluginInstall
 
 # Build Command-T with
     #Install OSX Command Line tools and fix if necessary
@@ -31,6 +22,8 @@
     # (rvm installed 1.9.3 also known to work for OSX 10.7/10.8 and Ubuntu 10.04/12.04/12.10)
     ruby extconf.rb
     make
+
+# Load iterm2 preferences from ~/dotfiles/iterm
 
 # Install ack per platform
     sudo apt-get install ack-grep    # Debian/Ubuntu
