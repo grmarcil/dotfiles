@@ -25,6 +25,11 @@
 
 # Load iterm2 preferences from ~/dotfiles/iterm
 
+# Use zsh (optional)
+    brew install zsh
+    # edit /etc/shells to include output from `which zsh`
+    chsh -s [which zsh]
+
 # Install ack per platform
     sudo apt-get install ack-grep    # Debian/Ubuntu
     brew install ack                 # OS X with homebrew
