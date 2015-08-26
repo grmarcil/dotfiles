@@ -21,7 +21,6 @@ windows:
           - foreman start
         - 2:
           - cd backend
-          - redis-server
   - services:
       layout: even-vertical
       panes:
