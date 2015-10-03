@@ -23,8 +23,5 @@ alias ev='vim ~/.vimrc'
 alias ea='vim -v ~/dotfiles/bash/aliases && reload'
 alias eg='vim ~/.gitconfig'
 
-alias fe='cd ~/frontend'
-alias be='cd ~/backend'
-alias de='cd ~/deploy'
 alias dot='cd ~/dotfiles'
 
