@@ -105,10 +105,6 @@ endif
 "==============================================================================
 " Key Mappings
 "------------------------------------------------------------------------------
-" Easy esc mapping
-inoremap jj <Esc>
-" Quick save
-nnoremap <leader>w :w<CR>
 " Edit/source vimrc
 nnoremap <silent> <leader>vim :e $MYVIMRC<CR>
 nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
