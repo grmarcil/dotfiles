@@ -23,6 +23,7 @@ alias dot='cd ~/dotfiles'
 cb() {
   cd ~/berkeley/$1
 }
+alias vmacs='open /usr/local/Cellar/emacs/24.5/Emacs.app'
 
 # -------------------------------------------------------------------
 # directory information
