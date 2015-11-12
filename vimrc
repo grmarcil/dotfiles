@@ -35,6 +35,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'moll/vim-bbye'                     " Better buffer closing
 Plugin 'pangloss/vim-javascript'
 Plugin 'tmhedberg/matchit'                 " Extends % matching
+Plugin 'lervag/vimtex'                     " Latex support
 "Plugin 'sjl/gundo.vim'                    " Could be interesting later
 "Plugin 'tpope/vim-rails'
 "Plugin 'tpope/vim-markdown'
