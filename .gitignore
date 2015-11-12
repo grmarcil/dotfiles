@@ -1,2 +1,7 @@
 vim/
 bash/git_identity
+emacs.d/elpa/
+*~
+*/.emacs.desktop
+*/.emacs.desktop.lock
+*.elc
