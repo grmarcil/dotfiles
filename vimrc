@@ -60,6 +60,7 @@ set wildmode=list:longest,full
 set wildignorecase
 set scrolloff=1                 " At least 1 visible line above/below cursor
 set mouse=a
+set nojoinspaces                " J joins sentences with one space not two
 
 "==============================================================================
 " Layout Options
