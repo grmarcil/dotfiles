@@ -109,8 +109,8 @@ endif
 " Key Mappings
 "------------------------------------------------------------------------------
 " Edit/source vimrc
-nnoremap <silent> <leader>vim :e $MYVIMRC<CR>
-nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
+nnoremap <leader>vim :e $MYVIMRC<CR>
+nnoremap <leader>sv :so $MYVIMRC<CR>
 " Vim&Vigor buffer switching jetpack
 nnoremap <leader>l :ls<CR>:b<space>
 " Nerdtree shortcut
@@ -121,6 +121,9 @@ nnoremap <leader>bd :Bdelete<CR>
 nnoremap <leader>W :FixWhitespace<CR>
 " Kill search highlighting
 nnoremap <silent> <leader>h :noh<CR>
+" Sessions
+nnoremap <leader>ms :mksession!<CR>
+nnoremap <leader>ss :so Session.vim<CR>
 
 "==============================================================================
 " File Type Options
