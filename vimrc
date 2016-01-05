@@ -34,8 +34,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'moll/vim-bbye'                     " Better buffer closing
 Plugin 'pangloss/vim-javascript'
-Plugin 'tmhedberg/matchit'                 " Extends % matching
 Plugin 'lervag/vimtex'                     " Latex support
+Plugin 'klen/python-mode'
+Plugin 'tmhedberg/matchit'                 " Extends % matching
 "Plugin 'sjl/gundo.vim'                    " Could be interesting later
 "Plugin 'tpope/vim-rails'
 "Plugin 'tpope/vim-markdown'
@@ -125,6 +126,13 @@ nnoremap <silent> <leader>h :noh<CR>
 "------------------------------------------------------------------------------
 au BufNewFile,BufRead *.ejs set filetype=html
 
+" Turn off heavy/annoying things from pymode
+" Kind of split on whether or not I even need the package - I basically just
+" want the best language syntax highlighting, comment handling, and error
+" checking I can get with nothing else
+let g:pymode_rope_complete_on_dot = 0
+let g:pymode_lint_checkers = ['pyflakes']
+let g:pymode_lint_cwindow = 0
 
 "==============================================================================
 " Commands
