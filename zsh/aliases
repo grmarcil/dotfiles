@@ -31,6 +31,7 @@ alias vmacs='open /usr/local/Cellar/emacs/24.5/Emacs.app'
 if [[ $IS_MAC -eq 1 ]]; then
     alias l='ls -al'
     alias ll='ls -GFhl'  # Colorize output, add file type indicator, and put sizes in human readable format
+    alias lt='ls -GFhlt | head -10'  # Same as above, but only 10 latest
     alias la='ls -GFlah' # Same as above, but show all
     alias lh='ls -d .*' # show hidden files/directories only
 fi
