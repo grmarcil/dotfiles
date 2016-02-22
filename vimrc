@@ -38,8 +38,6 @@ Plugin 'lervag/vimtex'                     " Latex support
 Plugin 'klen/python-mode'
 Plugin 'tmhedberg/matchit'                 " Extends % matching
 "Plugin 'sjl/gundo.vim'                    " Could be interesting later
-"Plugin 'tpope/vim-rails'
-"Plugin 'tpope/vim-markdown'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
@@ -93,7 +91,7 @@ if exists('+colorcolumn') " Marks the 80th character column
     set colorcolumn=80
 endif
 colorscheme solarized
-set background=light
+set background=dark
 set cursorline
 
 " set the cursor to a vertical line in insert mode and a solid block in command mode
@@ -128,7 +126,8 @@ nnoremap <leader>ss :so Session.vim<CR>
 "==============================================================================
 " File Type Options
 "------------------------------------------------------------------------------
-au BufNewFile,BufRead *.ejs set filetype=html
+au BufNewFile,BufRead *.ejs setlocal filetype=html
+au Filetype tex,latex,gitcommit call SetProseOptions()
 
 " Turn off heavy/annoying things from pymode
 " Kind of split on whether or not I even need the package - I basically just
@@ -144,7 +143,6 @@ let g:pymode_lint_cwindow = 0
 :command! Numtog :call NumberToggle()
 :command! BuffDiff :call FileBuffDiff()
 
-
 "==============================================================================
 " Functions
 "------------------------------------------------------------------------------
@@ -156,6 +154,12 @@ function! NumberToggle()
     set relativenumber
     set number
   end
+endfunc
+
+" Turn on spellcheck and hard wrap for commit messages and latex
+function! SetProseOptions()
+  setlocal spell
+  setlocal formatoptions+=tca
 endfunc
 
 " Shows diff between buffer and file on disk
