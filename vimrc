@@ -15,34 +15,9 @@ set nocompatible
 " Setup Vundle and plugins
 " Refresh with :BundleInstall
 "------------------------------------------------------------------------------
-filetype on                                " Enable it first for git exit code
-filetype off                               " Disable for Vundle load
-set rtp+=~/.vim/bundle/Vundle.vim             " Add Vundle subdir to run time path
-call vundle#rc()                           " Enable vundle
-
-Plugin 'VundleVim/Vundle.vim'              " Let vundle manage vundle
-
-Plugin 'christoomey/vim-tmux-navigator'    " See readme for tmux.conf reqs
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'                 " Vim status/buffer line
-Plugin 'tpope/vim-fugitive'                " Git wrapper
-Plugin 'tpope/vim-surround'                " Manage surrounding marks, tags
-Plugin 'tpope/vim-repeat'                  " Support repeat for plugin actions
-Plugin 'tpope/vim-commentary'              " Manage comments
-Plugin 'scrooloose/syntastic'              " Linter
-Plugin 'scrooloose/nerdtree'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'moll/vim-bbye'                     " Better buffer closing
-Plugin 'pangloss/vim-javascript'
-Plugin 'lervag/vimtex'                     " Latex support
-Plugin 'klen/python-mode'
-Plugin 'tmhedberg/matchit'                 " Extends % matching
-"Plugin 'sjl/gundo.vim'                    " Could be interesting later
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#whitespace#enabled = 1
-
-filetype plugin indent on       " (Re)enable filetype and indenting
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
 
 "==============================================================================
 " Basic Options
