@@ -102,7 +102,7 @@ nnoremap <leader>ss :so Session.vim<CR>
 " File Type Options
 "------------------------------------------------------------------------------
 au BufNewFile,BufRead *.ejs setlocal filetype=html
-au Filetype tex,latex,gitcommit call SetProseOptions()
+au Filetype text,tex,latex,gitcommit call SetProseOptions()
 
 " Turn off heavy/annoying things from pymode
 " Kind of split on whether or not I even need the package - I basically just
