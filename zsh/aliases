@@ -48,4 +48,7 @@ if [[ $IS_LINUX -eq 1 ]]; then
 fi
 
 alias lsd="ls -ld *" # show directories
-alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+tree() {
+  ls -R $1 | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
+}
+
