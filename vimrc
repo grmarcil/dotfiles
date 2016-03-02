@@ -15,8 +15,8 @@ set nocompatible
 " Setup Vundle and plugins
 " Refresh with :BundleInstall
 "------------------------------------------------------------------------------
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+if filereadable(expand("~/.vim/bundles.vim"))
+  source ~/.vim/bundles.vim
 endif
 
 "==============================================================================
