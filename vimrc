@@ -142,7 +142,8 @@ endfunc
 " Turn on spellcheck and hard wrap for commit messages and latex
 function! SetProseOptions()
   setlocal spell
-  setlocal formatoptions+=tca
+  setlocal textwidth=80
+  setlocal formatoptions+=tc
 endfunc
 
 " Shows diff between buffer and file on disk
