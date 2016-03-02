@@ -3,6 +3,7 @@
 " Credits:        http://zanshin.net/2011/11/15/using-vim/
 "                 https://gist.github.com/1367558#file_.vimrc
 "                 https://github.com/josephlogik/dotfiles/blob/master/vimrc
+"                 http://got-ravings.blogspot.com/ For statusline material
 "
 " Dependencies:   https://github.com/gmarik/vundle
 "
@@ -34,6 +35,13 @@ set wildignorecase
 set scrolloff=1                 " At least 1 visible line above/below cursor
 set mouse=a
 set nojoinspaces                " J joins sentences with one space not two
+
+"==============================================================================
+" Statusline
+"------------------------------------------------------------------------------
+if filereadable(expand("~/.vim/statusline.vim"))
+  source ~/.vim/statusline.vim
+endif
 
 "==============================================================================
 " Layout Options
