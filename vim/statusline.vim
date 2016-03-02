@@ -48,7 +48,6 @@ set statusline+=\ %P    "percent through file
 set laststatus=2
 
 "recalculate the trailing whitespace warning when idle, and after saving
-"TODO this seems not to work
 autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
 
 "return '[\s]' if trailing white space is detected

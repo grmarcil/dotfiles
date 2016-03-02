@@ -99,7 +99,7 @@ nnoremap <leader>nt :NERDTreeToggle<CR>
 " BDelete to close buffers but not windows
 nnoremap <leader>bd :Bdelete<CR>
 " FixWhitespace shortcut
-nnoremap <leader>W :FixWhitespace<CR>
+nnoremap <leader>w :FixWhitespace<CR>
 " Kill search highlighting
 nnoremap <silent> <leader>h :noh<CR>
 " Sessions
