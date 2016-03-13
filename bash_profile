@@ -56,3 +56,6 @@ fi
 
 unset RED YELLOW GREEN RESET
 
+
+# added by Anaconda2 2.5.0 installer
+export PATH="/anaconda/bin:$PATH"
