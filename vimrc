@@ -74,6 +74,7 @@ set backspace=indent,eol,start  " backspace through everything in insert mode
 if exists('+colorcolumn') " Marks the 80th character column
     set colorcolumn=80
 endif
+set textwidth=80
 colorscheme solarized
 set background=dark
 set cursorline
