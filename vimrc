@@ -105,6 +105,9 @@ nnoremap <silent> <leader>h :noh<CR>
 " Sessions
 nnoremap <leader>ms :mksession!<CR>
 nnoremap <leader>ss :so Session.vim<CR>
+nnoremap <leader>gt :GitGutterToggle<CR>
+" LaTeX (rubber) macro for compiling
+nnoremap <leader>cl :w<CR>:!rubber --pdf --warn all %<CR>
 
 "==============================================================================
 " File Type Options

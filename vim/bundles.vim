@@ -16,10 +16,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'moll/vim-bbye'                     " Better buffer closing
 Plugin 'pangloss/vim-javascript'
-Plugin 'lervag/vimtex'                     " Latex support
 Plugin 'klen/python-mode'
 Plugin 'tmhedberg/matchit'                 " Extends % matching
+Plugin 'airblade/vim-gitgutter'
 "Plugin 'sjl/gundo.vim'                    " Could be interesting later
 
 filetype plugin indent on       " (Re)enable filetype and indenting
+
+let g:gitgutter_enabled = 0     " Toggle gitgutter on with <leader>gt
 
