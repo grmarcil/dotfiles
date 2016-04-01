@@ -11,7 +11,7 @@ alias a='git add'
 alias c='git commit'
 
 if [[ ( $OSTYPE == darwin* ) ]]; then
-	alias tmux='~/dotfiles/tmux_wrapper'
+  alias tmux='~/dotfiles/tmux_wrapper'
 fi
 
 alias ez='vim ~/dotfiles/zshrc'
@@ -23,7 +23,7 @@ alias dot='cd ~/dotfiles'
 cb() {
   cd ~/berkeley/$1
 }
-alias vmacs='open /usr/local/Cellar/emacs/24.5/Emacs.app'
+alias vmacs='open /usr/local/Cellar/emacs/24.5/Emacs.app $1'
 
 # -------------------------------------------------------------------
 # directory information
