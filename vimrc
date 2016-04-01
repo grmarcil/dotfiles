@@ -116,6 +116,7 @@ nnoremap <leader>cl :w<CR>:!rubber --pdf --warn all %<CR>
 " File Type Options
 "------------------------------------------------------------------------------
 au BufNewFile,BufRead *.ejs setlocal filetype=html
+au BufNewFile,BufRead *.ino setlocal filetype=cpp
 au Filetype text,tex,latex,gitcommit call SetProseOptions()
 
 " Turn off heavy/annoying things from pymode
