@@ -75,6 +75,7 @@ if exists('+colorcolumn') " Marks the 80th character column
     set colorcolumn=80
 endif
 set textwidth=80
+set formatoptions-="t"
 colorscheme solarized
 set background=dark
 set cursorline
