@@ -1,5 +1,10 @@
 vim/bundle/
 vim/spell/
+vim/doc/
+vim/ftdetect/
+vim/ftplugin/
+vim/indent/
+vim/syntax/
 vim/.netrwhist
 bash/git_identity
 emacs.d/elpa/

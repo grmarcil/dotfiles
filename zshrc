@@ -12,9 +12,10 @@ source ~/dotfiles/zsh/bindkeys
 source ~/dotfiles/zsh/history
 # source ~/src/zaw/zaw
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 if [ -z "$GIT_AUTHOR_NAME" ]; then
   source ~/dotfiles/bash/git_identity
 fi
 
+## rvm
+PATH="$GEM_HOME/bin:$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

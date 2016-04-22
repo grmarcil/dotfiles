@@ -10,10 +10,6 @@ alias d='git diff'
 alias a='git add'
 alias c='git commit'
 
-if [[ ( $OSTYPE == darwin* ) ]]; then
-  alias tmux='~/dotfiles/tmux_wrapper'
-fi
-
 alias ez='vim ~/dotfiles/zshrc'
 alias ev='vim ~/.vimrc'
 alias ea='vim -v ~/dotfiles/zsh/aliases && reload'

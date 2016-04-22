@@ -24,6 +24,7 @@ endif
 " Basic Options
 "------------------------------------------------------------------------------
 let mapleader="\<space>"        " Remapped from \"
+let maplocalleader="\\"
 set encoding=utf-8
 set lazyredraw                  " Don't redraw while executing macros
 set laststatus=2                " Always show status bar
@@ -110,7 +111,7 @@ nnoremap <leader>ms :mksession!<CR>
 nnoremap <leader>ss :so Session.vim<CR>
 nnoremap <leader>gt :GitGutterToggle<CR>
 " LaTeX (rubber) macro for compiling
-nnoremap <leader>cl :w<CR>:!rubber --pdf --warn all %<CR>
+nnoremap <leader>xl :w<CR>:!rubber --pdf --warn all %<CR>
 
 "==============================================================================
 " File Type Options
@@ -127,6 +128,8 @@ au Filetype text,tex,latex,gitcommit call SetProseOptions()
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_lint_checkers = ['pyflakes']
 let g:pymode_lint_cwindow = 0
+
+let g:org_agenda_files = ['~/org/*.org']
 
 "==============================================================================
 " Commands

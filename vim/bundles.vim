@@ -11,6 +11,7 @@ Plugin 'tpope/vim-fugitive'                " Git wrapper
 Plugin 'tpope/vim-surround'                " Manage surrounding marks, tags
 Plugin 'tpope/vim-repeat'                  " Support repeat for plugin actions
 Plugin 'tpope/vim-commentary'              " Manage comments
+Plugin 'tpope/vim-speeddating'
 Plugin 'scrooloose/syntastic'              " Linter
 Plugin 'scrooloose/nerdtree'
 Plugin 'bronson/vim-trailing-whitespace'
@@ -18,7 +19,6 @@ Plugin 'moll/vim-bbye'                     " Better buffer closing
 Plugin 'pangloss/vim-javascript'
 Plugin 'klen/python-mode'
 Plugin 'tmhedberg/matchit'                 " Extends % matching
-Plugin 'airblade/vim-gitgutter'
 "Plugin 'sjl/gundo.vim'                    " Could be interesting later
 
 filetype plugin indent on       " (Re)enable filetype and indenting
