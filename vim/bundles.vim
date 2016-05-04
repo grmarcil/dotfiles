@@ -18,6 +18,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'moll/vim-bbye'                     " Better buffer closing
 Plugin 'pangloss/vim-javascript'
 Plugin 'klen/python-mode'
+Plugin 'JuliaLang/julia-vim'
 Plugin 'tmhedberg/matchit'                 " Extends % matching
 "Plugin 'sjl/gundo.vim'                    " Could be interesting later
 
