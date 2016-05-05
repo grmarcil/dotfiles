@@ -11,6 +11,7 @@ alias la='ls -alh'
 alias g=git
 alias s='git status'
 alias d='git diff'
+alias dc='git diff --cached'
 alias a='git add'
 alias c='git commit'
 
