@@ -25,3 +25,6 @@ directory exists?
 # Configure git identity
     cp ~/dotfiles/bash/git_identity.example ~/dotfiles/bash/git_identity
     vim ~/dotfiles/bash/git_identity
+
+# Setup OSX tmux fix
+    `brew install reattach-to-user-namespace`
