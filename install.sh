@@ -1,21 +1,18 @@
 #! /bin/bash
 DIR=~/dotfiles
-ignore=(README.md install.sh .git .gitignore .gitmodules)
+dotfiles=( ackrc bash_profile bashrc gemrc gitconfig gitignore_global gvimrc
+            pryrc tmux-osx.conf tmux.conf tmuxinator vim vimrc zshrc)
 
+# Symlink dotfiles to the home directory
 cd $DIR
-for filename in *
+for filename in ${dotfiles[@]}
 do
-  shouldIgnore=false
-  for ignorename in ${ignore[@]}
-  do
-    if [[ $filename == $ignorename ]]
-    then
-      shouldIgnore=true
-    fi
-  done
+  ln -sfn $DIR/$filename ~/.$filename
+done
 
-  if [ $shouldIgnore == false -a ! -L ~/.$filename ]
-  then
-    ln -sf $DIR/$filename ~/.$filename
-  fi
+# Symlink configfiles to the ~/.config directory
+configfiles=( nvim )
+for filename in ${configfiles[@]}
+do
+  ln -sfn $DIR/config/$filename ~/.config/$filename
 done
