@@ -6,6 +6,9 @@ vim/ftplugin/
 vim/indent/
 vim/syntax/
 vim/.netrwhist
+config/nvim/autoload
+config/nvim/plugged
+config/nvim/spell
 bash/git_identity
 emacs.d/elpa/
 *~

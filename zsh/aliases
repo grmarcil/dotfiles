@@ -11,10 +11,7 @@ alias dc='git diff --cached'
 alias a='git add'
 alias c='git commit'
 
-alias ez='vim ~/dotfiles/zshrc'
-alias ev='vim ~/.vimrc'
-alias ea='vim -v ~/dotfiles/zsh/aliases && reload'
-alias eg='vim ~/.gitconfig'
+alias nv='nvim'
 
 alias dot='cd ~/dotfiles'
 cb() {
