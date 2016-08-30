@@ -32,7 +32,7 @@ set statusline+=%{StatuslineTrailingSpaceWarning()}
 set statusline+=%*
 
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%{neomake#statusline#LoclistStatus()}
 set statusline+=%*
 
 "display a warning if &paste is set
@@ -53,7 +53,7 @@ autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
 "return '[\s]' if trailing white space is detected
 "return '' otherwise
 function! StatuslineTrailingSpaceWarning()
-    if !exists("b:statusline_trailing_space_warning")
+    if !exists('b:statusline_trailing_space_warning')
 
         if !&modifiable
             let b:statusline_trailing_space_warning = ''
@@ -87,7 +87,7 @@ autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
 "return '[mixed-indenting]' if spaces and tabs are used to indent
 "return an empty string if everything is fine
 function! StatuslineTabWarning()
-    if !exists("b:statusline_tab_warning")
+    if !exists('b:statusline_tab_warning')
         let b:statusline_tab_warning = ''
 
         if !&modifiable
@@ -112,7 +112,7 @@ function! StatuslineFilepath()
   " Heavily modifeid from https://github.com/Lokaltog/vim-powerline/
   " Recalculate the filepath when cwd changes.
   let cwd = getcwd()
-  if exists("b:Statusline_cwd") && cwd != b:Statusline_cwd
+  if exists('b:Statusline_cwd') && cwd != b:Statusline_cwd
     unlet! b:Statusline_filepath
   endif
   let b:Statusline_cwd = cwd

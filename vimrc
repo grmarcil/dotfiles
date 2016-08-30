@@ -41,7 +41,7 @@ set updatetime=1000             " Faster updates w/ commands waiting for user pa
 "==============================================================================
 " Statusline
 "------------------------------------------------------------------------------
-if filereadable(expand("~/.vim/statusline.vim"))
+if filereadable(expand('~/.vim/statusline.vim'))
   source ~/.vim/statusline.vim
 endif
 

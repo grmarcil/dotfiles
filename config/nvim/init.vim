@@ -11,15 +11,13 @@
 " Set up vim-plug
 " Refresh with :PlugInstall
 "------------------------------------------------------------------------------
-if filereadable(expand("~/.config/nvim/plugins.vim"))
+if filereadable(expand('~/.config/nvim/plugins.vim'))
   source ~/.config/nvim/plugins.vim
 endif
 
 "==============================================================================
 " Basic Options
 "------------------------------------------------------------------------------
-let mapleader="\<space>"        " Remapped from \"
-let maplocalleader="\\"
 set encoding=utf-8
 set lazyredraw                  " Don't redraw while executing macros
 set laststatus=2                " Always show status bar
@@ -35,7 +33,7 @@ set updatetime=1000             " Faster updates w/ commands waiting for user pa
 "==============================================================================
 " Statusline
 "------------------------------------------------------------------------------
-if filereadable(expand("~/.config/nvim/statusline.vim"))
+if filereadable(expand('~/.config/nvim/statusline.vim'))
   source ~/.config/nvim/statusline.vim
 endif
 
@@ -83,8 +81,8 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 " Edit/source vimrc
 nnoremap <leader>vim :e $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
-" Vim&Vigor buffer switching jetpack
-nnoremap <leader>l :ls<CR>:b<space>
+" Buffer switching with fzf.vim
+nnoremap <leader>l :Buffers<CR>
 " Nerdtree shortcut
 nnoremap <leader>nt :NERDTreeToggle<CR>
 " BDelete to close buffers but not windows
