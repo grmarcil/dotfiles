@@ -82,8 +82,13 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 " Edit/source vimrc
 nnoremap <leader>vim :e $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
-" Buffer switching with fzf.vim
+" Finding with fzf.vim
 nnoremap <leader>l :Buffers<CR>
+nnoremap <leader>fb :Buffers<CR>
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fp :Files 
+nnoremap <leader>fm :Marks<CR>
+nnoremap <leader>fl :BLines<CR>
 " Nerdtree shortcut
 nnoremap <leader>nt :NERDTreeToggle<CR>
 " BDelete to close buffers but not windows
