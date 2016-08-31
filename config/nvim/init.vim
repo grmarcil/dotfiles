@@ -18,6 +18,7 @@ endif
 "==============================================================================
 " Basic Options
 "------------------------------------------------------------------------------
+let mapleader="\<space>"        " Remapped from \
 set encoding=utf-8
 set lazyredraw                  " Don't redraw while executing macros
 set laststatus=2                " Always show status bar
