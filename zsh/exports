@@ -12,6 +12,7 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
 
-export EDITOR='vim'
+export EDITOR='nvim'
+export GIT_EDITOR='nvim'
 # CTAGS Sorting in VIM/Emacs is better behaved with this in place
 export LC_COLLATE=C

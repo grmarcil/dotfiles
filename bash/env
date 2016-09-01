@@ -1,4 +1,5 @@
 # vi: set ft=sh :
 
 export PATH=/usr/local/bin:$PATH:~/bin
-export EDITOR=vim
+export EDITOR=nvim
+export GIT_EDITOR=nvim
