@@ -2,7 +2,7 @@ set statusline =%#identifier#
 set statusline+=[%{StatuslineFilepath()}]
 set statusline+=%*
 "modified flag
-set statusline+=%#type#
+set statusline+=%#modifiedstatus#
 set statusline+=%m
 set statusline+=%*
 

@@ -53,7 +53,6 @@ set ignorecase                  " searches are case insensitive...
 set smartcase                   " unless they contain at least one capital letter
 set gdefault                    " replace all one line by default, use /g for single
 
-
 "==============================================================================
 " Appearance Options
 "------------------------------------------------------------------------------
@@ -65,12 +64,12 @@ set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set shiftround                  " use even multiples of shiftwidth with >
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
-if exists('+colorcolumn') " Marks the 80th character column
+if exists('+colorcolumn')       " Marks the 80th character column
     set colorcolumn=80
 endif
 set textwidth=80
 set formatoptions-="t"
-colorscheme flattened_dark
+colorscheme solarized_min_dark
 set cursorline
 
 " cursor is vertical line in insert mode, solid block in command mode

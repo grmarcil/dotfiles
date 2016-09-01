@@ -1,7 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'christoomey/vim-tmux-navigator'    " See readme for tmux.conf reqs
-Plug 'romainl/flattened'
 Plug 'tpope/vim-fugitive'                " Git wrapper
 Plug 'tpope/vim-surround'                " Manage surrounding marks, tags
 Plug 'tpope/vim-repeat'                  " Support repeat for plugin actions
