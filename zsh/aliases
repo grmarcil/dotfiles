@@ -26,7 +26,6 @@ alias vmacs='open /usr/local/Cellar/emacs/24.5/Emacs.app $1'
 # directory information
 # -------------------------------------------------------------------
 if [[ $IS_MAC -eq 1 ]]; then
-    alias l='ls -al'
     alias ll='ls -GFhl'  # Colorize output, add file type indicator, and put sizes in human readable format
     alias la='ls -GFlah' # Same as above, but show all
     alias lh='ls -d .*' # show hidden files/directories only
@@ -35,7 +34,6 @@ if [[ $IS_MAC -eq 1 ]]; then
     }
 fi
 if [[ $IS_LINUX -eq 1 ]]; then
-    alias l='ls -al --color'
     alias ll='ls -Fhl --color' # Same as above, but in long listing format
     alias la='ls -Flah --color' # Colorize output, add file type indicator, and put sizes in human readable format
     alias lh='ls -d .* --color' # show hidden files/directories only
