@@ -18,3 +18,6 @@ fi
 
 PATH="$GEM_HOME/bin:$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# Virtualenv/VirtualenvWrapper
+source /usr/local/bin/virtualenvwrapper.sh
