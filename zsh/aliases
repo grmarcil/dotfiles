@@ -5,14 +5,13 @@ alias h=history
 alias hgrep='history | grep'
 
 alias g=git
-alias s='git status --short --branch'
-alias sf='git status'
+alias s='git status'
+alias ss='git status --short --branch'
 alias d='git diff'
 alias dc='git diff --cached'
 alias a='git add'
 alias c='git commit'
 alias l='git log --graph --oneline --decorate --all --show-signature'
-alias a='git add -p'
 
 alias nv='nvim'
 
