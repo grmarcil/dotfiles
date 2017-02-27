@@ -69,7 +69,7 @@ if exists('+colorcolumn')       " Marks the 80th character column
 endif
 set textwidth=80
 set formatoptions-="t"
-colorscheme solarized_min_dark
+colorscheme flattened_dark
 set cursorline
 
 " cursor is vertical line in insert mode, solid block in command mode
@@ -85,7 +85,7 @@ nnoremap <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>l :Buffers<CR>
 nnoremap <leader>fb :Buffers<CR>
 nnoremap <leader>ff :Files<CR>
-nnoremap <leader>fp :Files 
+nnoremap <leader>fp :Files
 nnoremap <leader>fm :Marks<CR>
 nnoremap <leader>fl :BLines<CR>
 " Nerdtree shortcut
@@ -111,21 +111,12 @@ au BufNewFile,BufRead *.ino setlocal filetype=cpp
 au BufNewFile,BufRead *.launch setlocal filetype=xml
 au Filetype text,tex,latex,gitcommit call SetProseOptions()
 
-" Turn off heavy/annoying things from pymode
-" Kind of split on whether or not I even need the package - I basically just
-" want the best language syntax highlighting, comment handling, and error
-" checking I can get with nothing else
-let g:pymode_rope_complete_on_dot = 0
-let g:pymode_lint_checkers = ['pyflakes']
-let g:pymode_lint_cwindow = 0
-
-let g:org_agenda_files = ['~/org/*.org']
-
 "==============================================================================
 " Commands
 "------------------------------------------------------------------------------
 :command! Numtog :call NumberToggle()
 :command! BuffDiff :call FileBuffDiff()
+:command! PrintPDF :call PrintToPDF()
 
 "==============================================================================
 " Functions
@@ -153,3 +144,8 @@ function! FileBuffDiff()
   :w !diff % -
 endfunc
 
+function! PrintToPDF()
+  :ha > %:r.ps
+  :! ps2pdf %:r.ps
+  :! rm %:r.ps
+endfunc
