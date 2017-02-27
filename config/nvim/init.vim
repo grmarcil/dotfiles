@@ -110,6 +110,7 @@ au BufNewFile,BufRead *.ejs setlocal filetype=html
 au BufNewFile,BufRead *.ino setlocal filetype=cpp
 au BufNewFile,BufRead *.launch setlocal filetype=xml
 au Filetype text,tex,latex,gitcommit call SetProseOptions()
+au Filetype python nnoremap <leader>y :0,$!yapf<Cr>
 
 "==============================================================================
 " Commands
