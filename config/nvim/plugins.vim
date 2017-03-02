@@ -7,10 +7,10 @@ Plug 'tpope/vim-surround'                " Manage surrounding marks, tags
 Plug 'tpope/vim-repeat'                  " Support repeat for plugin actions
 Plug 'tpope/vim-commentary'              " Manage comments
 Plug 'tpope/vim-fugitive'                " Git wrapper
+Plug 'tpope/vim-vinegar'                 " Netrw extensions (file browsing)
 Plug 'bronson/vim-trailing-whitespace'   " Clean up trailing whitespace
 Plug 'neomake/neomake'                   " Linting and make plugin
 Plug 'christoomey/vim-tmux-navigator'    " See readme for tmux.conf reqs
-Plug 'scrooloose/nerdtree'               " Directory browser
 Plug 'moll/vim-bbye'                     " Better buffer closing
 Plug 'tmhedberg/matchit'                 " Extends % matching
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " Requires fzf installed by homebrew

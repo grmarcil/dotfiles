@@ -88,8 +88,6 @@ nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fp :Files
 nnoremap <leader>fm :Marks<CR>
 nnoremap <leader>fl :BLines<CR>
-" Nerdtree shortcut
-nnoremap <leader>nt :NERDTreeToggle<CR>
 " BDelete to close buffers but not windows
 nnoremap <leader>bd :Bdelete<CR>
 " FixWhitespace shortcut
