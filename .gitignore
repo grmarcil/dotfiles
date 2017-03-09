@@ -10,6 +10,7 @@ vim/.netrwhist
 config/nvim/autoload
 config/nvim/plugged
 config/nvim/spell
+config/nvim/.netrwhist
 bash/git_identity
 emacs.d/elpa/
 *~
