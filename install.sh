@@ -1,7 +1,7 @@
 #! /bin/bash
 DIR=~/dotfiles
 dotfiles=( ackrc bash_profile bashrc gemrc gitconfig gitignore_global gvimrc
-            pryrc tmux-osx.conf tmux.conf tmuxinator vim vimrc zshrc)
+            pryrc tmux-osx.conf tmux.conf vim vimrc zshrc)
 
 # Symlink dotfiles to the home directory
 cd $DIR
