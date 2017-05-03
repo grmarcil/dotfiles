@@ -19,5 +19,11 @@ fi
 PATH="$GEM_HOME/bin:$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-# Virtualenv/VirtualenvWrapper
-source /usr/local/bin/virtualenvwrapper.sh
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/Greg/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/Greg/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/Greg/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/Greg/google-cloud-sdk/completion.zsh.inc'; fi
+
+# added by Miniconda3 4.3.11 installer
+export PATH="/Users/Greg/miniconda3/bin:$PATH"
