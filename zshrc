@@ -24,6 +24,3 @@ if [ -f '/Users/Greg/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/Greg/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/Greg/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/Greg/google-cloud-sdk/completion.zsh.inc'; fi
-
-# added by Miniconda3 4.3.11 installer
-export PATH="/Users/Greg/miniconda3/bin:$PATH"

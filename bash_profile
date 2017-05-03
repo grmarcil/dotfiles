@@ -55,6 +55,3 @@ else
 fi
 
 unset RED YELLOW GREEN RESET
-
-# added by Miniconda3 4.3.11 installer
-export PATH="/Users/Greg/miniconda3/bin:$PATH"
