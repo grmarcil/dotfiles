@@ -15,12 +15,6 @@ alias l='git log --graph --oneline --decorate --all --show-signature'
 
 alias nv='nvim'
 
-alias dot='cd ~/dotfiles'
-cb() {
-  cd ~/berkeley/$1
-}
-alias vmacs='open /usr/local/Cellar/emacs/24.5/Emacs.app $1'
-
 # -------------------------------------------------------------------
 # directory information
 # -------------------------------------------------------------------
@@ -46,3 +40,12 @@ tree() {
   ls -R $1 | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
 }
 
+# Activate a python venv
+venv() {
+  source ~/.venvs/$1/bin/activate
+}
+
+# Make a new python venv with currently active python3
+make_venv() {
+  python3 -m venv ~/.venvs/$1
+}
