@@ -73,9 +73,6 @@ set formatoptions-="t"
 colorscheme flattened_dark
 set cursorline
 
-" cursor is vertical line in insert mode, solid block in command mode
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-
 "==============================================================================
 " Key Mappings
 "------------------------------------------------------------------------------
