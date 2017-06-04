@@ -107,6 +107,8 @@ au BufNewFile,BufRead *.ino setlocal filetype=cpp
 au BufNewFile,BufRead *.launch setlocal filetype=xml
 au Filetype text,tex,latex,gitcommit call SetProseOptions()
 au Filetype python nnoremap <leader>y :0,$!yapf<Cr>
+au Filetype python nnoremap <leader>bp oimport pdb; pdb.set_trace()<esc>
+au Filetype python nnoremap <leader>BP Oimport pdb; pdb.set_trace()<esc>
 
 "==============================================================================
 " Commands
