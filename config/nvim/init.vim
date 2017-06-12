@@ -98,6 +98,10 @@ nnoremap <leader>ss :so Session.vim<CR>
 nnoremap <leader>gt :GitGutterToggle<CR>
 " LaTeX (rubber) macro for compiling
 nnoremap <leader>xl :w<CR>:!rubber --pdf --warn all %<CR>
+" Show syntax highlight groups under the cursor
+nnoremap <leader>z :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 "==============================================================================
 " File Type Options
@@ -105,7 +109,7 @@ nnoremap <leader>xl :w<CR>:!rubber --pdf --warn all %<CR>
 au BufNewFile,BufRead *.ejs setlocal filetype=html
 au BufNewFile,BufRead *.ino setlocal filetype=cpp
 au BufNewFile,BufRead *.launch setlocal filetype=xml
-au Filetype text,tex,latex,gitcommit call SetProseOptions()
+au Filetype tex,latex,gitcommit call SetProseOptions()
 au Filetype python nnoremap <leader>y :0,$!yapf<Cr>
 au Filetype python nnoremap <leader>bp oimport pdb; pdb.set_trace()<esc>
 au Filetype python nnoremap <leader>BP Oimport pdb; pdb.set_trace()<esc>
