@@ -16,6 +16,9 @@ Plug 'tmhedberg/matchit'                 " Extends % matching
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " Requires fzf installed by homebrew
 Plug 'ludovicchabant/vim-gutentags'      " Manages tag files
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "Autocompletion
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
 
 "==============================================================================
 " Language Specific
@@ -42,3 +45,6 @@ elseif has("unix")
 endif
 
 autocmd! BufEnter,BufWritePost * Neomake
+
+call glaive#Install()
+Glaive codefmt plugin[mappings]
