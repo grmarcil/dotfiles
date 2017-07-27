@@ -70,7 +70,8 @@ if exists('+colorcolumn')       " Marks the 80th character column
 endif
 set textwidth=80
 set formatoptions-=t
-set formatoptions+=r
+set formatoptions-=r
+set formatoptions-=o
 colorscheme flattened_light
 set cursorline
 
