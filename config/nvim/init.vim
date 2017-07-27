@@ -70,8 +70,6 @@ if exists('+colorcolumn')       " Marks the 80th character column
 endif
 set textwidth=80
 set formatoptions-=t
-set formatoptions-=r
-set formatoptions-=o
 colorscheme flattened_light
 set cursorline
 
@@ -115,6 +113,7 @@ au Filetype tex,latex,gitcommit call SetProseOptions()
 au Filetype python nnoremap <leader>y :0,$!yapf<Cr>
 au Filetype python nnoremap <leader>bp oimport pdb; pdb.set_trace()<esc>
 au Filetype python nnoremap <leader>BP Oimport pdb; pdb.set_trace()<esc>
+au Filetype * setlocal formatoptions-=ro
 
 "==============================================================================
 " Commands
