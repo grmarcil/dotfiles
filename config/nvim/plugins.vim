@@ -20,6 +20,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "Autocompletion
 "==============================================================================
 " Language Specific
 "------------------------------------------------------------------------------
+Plug 'tweekmonster/deoplete-clang2'
 Plug 'pangloss/vim-javascript'
 Plug 'JuliaLang/julia-vim'
 Plug 'zchee/deoplete-jedi'
