@@ -31,6 +31,7 @@ set completeopt=menu
 set scrolloff=1                 " At least 1 visible line above/below cursor
 set nojoinspaces                " J joins sentences with one space not two
 set updatetime=1000             " Faster updates w/ commands waiting for user pause
+set mouse=a
 
 "==============================================================================
 " Statusline
