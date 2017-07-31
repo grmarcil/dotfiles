@@ -58,7 +58,6 @@ set gdefault                    " replace all one line by default, use /g for si
 "==============================================================================
 " Appearance Options
 "------------------------------------------------------------------------------
-syntax on
 set relativenumber
 set number
 set nowrap                      " don't wrap lines
@@ -103,6 +102,17 @@ nnoremap <leader>xl :w<CR>:!rubber --pdf --warn all %<CR>
 nnoremap <leader>z :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
       \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
       \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+"==============================================================================
+" Neovim python sources
+"------------------------------------------------------------------------------
+if has("mac")
+  let g:python_host_prog='/usr/local/bin/python'
+  let g:python3_host_prog='/usr/local/bin/python3'
+elseif has("unix")
+  let g:python_host_prog='/usr/bin/python'
+  let g:python3_host_prog='/usr/bin/python3'
+endif
 
 "==============================================================================
 " File Type Options

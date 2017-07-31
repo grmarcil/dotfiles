@@ -1,24 +1,34 @@
 call plug#begin('~/.config/nvim/plugged')
 
 "==============================================================================
-" General Plugins
+" Editing Plugins
 "------------------------------------------------------------------------------
-Plug 'tpope/vim-surround'                " Manage surrounding marks, tags
+Plug 'tpope/vim-surround'                " Manage surrounding marks
 Plug 'tpope/vim-repeat'                  " Support repeat for plugin actions
 Plug 'tpope/vim-commentary'              " Manage comments
+Plug 'tmhedberg/matchit'                 " Extends % matching
+Plug 'bronson/vim-trailing-whitespace'   " Clean up trailing whitespace
+Plug 'junegunn/vim-peekaboo'             " Show register drawer on \" and @
+Plug 'moll/vim-bbye'                     " Better buffer closing
+
+"==============================================================================
+" Code Quality Plugins
+"------------------------------------------------------------------------------
+Plug 'neomake/neomake'                   " Linting and make plugin
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "Autocompletion
+Plug 'google/vim-maktaba'                " Dependency for vim-codefmt
+Plug 'google/vim-codefmt'                " Code formatter
+Plug 'google/vim-glaive'                 " Dependency for vim-codefmt
+Plug 'ludovicchabant/vim-gutentags'      " Manages tag files
+
+"==============================================================================
+" Utility and Misc Plugins
+"------------------------------------------------------------------------------
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " Requires fzf installed by homebrew
+Plug 'christoomey/vim-tmux-navigator'    " See readme for tmux.conf reqs
+Plug 'konfekt/fastfold'                  " Don't update folds in insert mode
 Plug 'tpope/vim-fugitive'                " Git wrapper
 Plug 'tpope/vim-vinegar'                 " Netrw extensions (file browsing)
-Plug 'bronson/vim-trailing-whitespace'   " Clean up trailing whitespace
-Plug 'neomake/neomake'                   " Linting and make plugin
-Plug 'christoomey/vim-tmux-navigator'    " See readme for tmux.conf reqs
-Plug 'moll/vim-bbye'                     " Better buffer closing
-Plug 'tmhedberg/matchit'                 " Extends % matching
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " Requires fzf installed by homebrew
-Plug 'ludovicchabant/vim-gutentags'      " Manages tag files
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "Autocompletion
-Plug 'google/vim-maktaba'
-Plug 'google/vim-codefmt'
-Plug 'google/vim-glaive'
 
 "==============================================================================
 " Language Specific
@@ -26,23 +36,15 @@ Plug 'google/vim-glaive'
 Plug 'tweekmonster/deoplete-clang2'
 Plug 'pangloss/vim-javascript'
 Plug 'JuliaLang/julia-vim'
-Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-jedi'               " Deoplete python source
 
-call plug#end()
+call plug#end()                          " Automatically calls indent on/syntax enable
 
-filetype plugin indent on       " (Re)enable filetype and indenting
-
+"==============================================================================
+" Plugin Configuration
+"------------------------------------------------------------------------------
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
-let g:deoplete#disable_auto_complete = 1
-
-if has("mac")
-  let g:python_host_prog='/usr/local/bin/python'
-  let g:python3_host_prog='/usr/local/bin/python3'
-elseif has("unix")
-  let g:python_host_prog='/usr/bin/python'
-  let g:python3_host_prog='/usr/bin/python3'
-endif
 
 autocmd! BufEnter,BufWritePost * Neomake
 
