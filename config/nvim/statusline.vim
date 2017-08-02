@@ -53,31 +53,30 @@ autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
 "return '[\s]' if trailing white space is detected
 "return '' otherwise
 function! StatuslineTrailingSpaceWarning()
-    if !exists('b:statusline_trailing_space_warning')
+  if !exists('b:statusline_trailing_space_warning')
 
-        if !&modifiable
-            let b:statusline_trailing_space_warning = ''
-            return b:statusline_trailing_space_warning
-        endif
-
-        if search('\s\+$', 'nw') != 0
-            let b:statusline_trailing_space_warning = '[\s]'
-        else
-            let b:statusline_trailing_space_warning = ''
-        endif
+    if !&modifiable
+      let b:statusline_trailing_space_warning = ''
+      return b:statusline_trailing_space_warning
     endif
-    return b:statusline_trailing_space_warning
-endfunction
 
+    if search('\s\+$', 'nw') != 0
+      let b:statusline_trailing_space_warning = '[\s]'
+    else
+      let b:statusline_trailing_space_warning = ''
+    endif
+  endif
+  return b:statusline_trailing_space_warning
+endfunction
 
 "return the syntax highlight group under the cursor ''
 function! StatuslineCurrentHighlight()
-    let name = synIDattr(synID(line('.'),col('.'),1),'name')
-    if name == ''
-        return ''
-    else
-        return '[' . name . ']'
-    endif
+  let l:name = synIDattr(synID(line('.'),col('.'),1),'name')
+  if l:name ==? ''
+    return ''
+  else
+    return '[' . l:name . ']'
+  endif
 endfunction
 
 "recalculate the tab warning flag when idle and after writing
@@ -87,47 +86,47 @@ autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
 "return '[mixed-indenting]' if spaces and tabs are used to indent
 "return an empty string if everything is fine
 function! StatuslineTabWarning()
-    if !exists('b:statusline_tab_warning')
-        let b:statusline_tab_warning = ''
+  if !exists('b:statusline_tab_warning')
+    let b:statusline_tab_warning = ''
 
-        if !&modifiable
-            return b:statusline_tab_warning
-        endif
-
-        let tabs = search('^\t', 'nw') != 0
-
-        "find spaces that arent used as alignment in the first indent column
-        let spaces = search('^ \{' . &ts . ',}[^\t]', 'nw') != 0
-
-        if tabs && spaces
-            let b:statusline_tab_warning =  '[mixed-indenting]'
-        elseif (spaces && !&et) || (tabs && &et)
-            let b:statusline_tab_warning = '[&et]'
-        endif
+    if !&modifiable
+      return b:statusline_tab_warning
     endif
-    return b:statusline_tab_warning
+
+    let l:tabs = search('^\t', 'nw') != 0
+
+    "find spaces that arent used as alignment in the first indent column
+    let l:spaces = search('^ \{' . &tabstop . ',}[^\t]', 'nw') != 0
+
+    if l:tabs && l:spaces
+      let b:statusline_tab_warning =  '[mixed-indenting]'
+    elseif (l:spaces && !&expandtab) || (l:tabs && &expandtab)
+      let b:statusline_tab_warning = '[&et]'
+    endif
+  endif
+  return b:statusline_tab_warning
 endfunction
 
 function! StatuslineFilepath()
   " Heavily modifeid from https://github.com/Lokaltog/vim-powerline/
   " Recalculate the filepath when cwd changes.
-  let cwd = getcwd()
-  if exists('b:Statusline_cwd') && cwd != b:Statusline_cwd
+  let l:cwd = getcwd()
+  if exists('b:Statusline_cwd') && l:cwd != b:Statusline_cwd
     unlet! b:Statusline_filepath
   endif
-  let b:Statusline_cwd = cwd
+  let b:Statusline_cwd = l:cwd
 
   if exists('b:Statusline_filepath')
     return b:Statusline_filepath
   endif
 
-  let filepath = expand('%:p')
+  let l:filepath = expand('%:p')
 
-  if empty(filepath)
+  if empty(l:filepath)
     return 'None'
   endif
 
-  let ret = ''
+  let l:ret = ''
 
   " Display a short path where the first directories are shortened to their
   " first letter, i.e. "/home/user/foo/foo/bar/baz.vim" becomes
@@ -135,11 +134,11 @@ function! StatuslineFilepath()
   "
   " This displays the shortest possible path, relative to ~ or the
   " current directory.
-  let fpath = fnamemodify(filepath, ':~:.')
-  let ret = pathshorten(fpath)
+  let l:fpath = fnamemodify(l:filepath, ':~:.')
+  let l:ret = pathshorten(l:fpath)
 
-  let b:Statusline_filepath = ret
-  return ret
+  let b:Statusline_filepath = l:ret
+  return l:ret
 endfunction
 
 function! LinterStatus() abort

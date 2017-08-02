@@ -18,7 +18,7 @@ endif
 "==============================================================================
 " Basic Options
 "------------------------------------------------------------------------------
-let mapleader="\<space>"        " Remapped from \
+let g:mapleader="\<space>"        " Remapped from \
 set encoding=utf-8
 set lazyredraw                  " Don't redraw while executing macros
 set laststatus=2                " Always show status bar
@@ -108,10 +108,10 @@ nnoremap <leader>z :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") .
 "==============================================================================
 " Neovim python sources
 "------------------------------------------------------------------------------
-if has("mac")
+if has('mac')
   let g:python_host_prog='/usr/local/bin/python'
   let g:python3_host_prog='/usr/local/bin/python3'
-elseif has("unix")
+elseif has('unix')
   let g:python_host_prog='/usr/bin/python'
   let g:python3_host_prog='/usr/bin/python3'
 endif
