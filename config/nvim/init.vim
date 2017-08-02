@@ -72,7 +72,7 @@ set textwidth=80
 set formatoptions-=t
 colorscheme flattened_light
 set cursorline
-set foldmethod=syntax
+set foldmethod=indent
 set foldnestmax=2
 
 "==============================================================================
