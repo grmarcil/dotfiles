@@ -32,7 +32,7 @@ set statusline+=%{StatuslineTrailingSpaceWarning()}
 set statusline+=%*
 
 set statusline+=%#warningmsg#
-set statusline+=%{neomake#statusline#LoclistStatus()}
+set statusline+=%{LinterStatus()}
 set statusline+=%*
 
 "display a warning if &paste is set
@@ -142,3 +142,15 @@ function! StatuslineFilepath()
   return ret
 endfunction
 
+function! LinterStatus() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+
+  return l:counts.total == 0 ? '' : printf(
+  \   '%dW %dE',
+  \   l:all_non_errors,
+  \   l:all_errors
+  \)
+endfunction

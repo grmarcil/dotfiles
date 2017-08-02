@@ -14,7 +14,7 @@ Plug 'moll/vim-bbye'                     " Better buffer closing
 "==============================================================================
 " Code Quality Plugins
 "------------------------------------------------------------------------------
-Plug 'neomake/neomake'                   " Linting and make plugin
+Plug 'w0rp/ale'                          " Asynchronous linting engine
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "Autocompletion
 Plug 'google/vim-maktaba'                " Dependency for vim-codefmt
 Plug 'google/vim-codefmt'                " Code formatter
@@ -46,7 +46,11 @@ call plug#end()                          " Automatically calls indent on/syntax 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 
-autocmd! BufEnter,BufWritePost * Neomake
+" Don't run linter while typing
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_insert_leave = 1
+let g:ale_linters = {'cpp': ['clang']}
+let g:ale_echo_msg_format = '[%linter%, %severity%] %s'
 
 call glaive#Install()
 Glaive codefmt plugin[mappings]
