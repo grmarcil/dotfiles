@@ -16,3 +16,6 @@ export EDITOR='nvim'
 export GIT_EDITOR='nvim'
 # CTAGS Sorting in VIM/Emacs is better behaved with this in place
 export LC_COLLATE=C
+
+# FORCES PRO python lib
+export PYTHONPATH="~/matlab/FORCES_PRO_v1_6:${PYTHONPATH}"
