@@ -29,6 +29,7 @@ Plug 'christoomey/vim-tmux-navigator'    " See readme for tmux.conf reqs
 Plug 'konfekt/fastfold'                  " Don't update folds in insert mode
 Plug 'tpope/vim-fugitive'                " Git wrapper
 Plug 'tpope/vim-vinegar'                 " Netrw extensions (file browsing)
+Plug 'justinmk/vim-dirvish'              " Directory viewer
 
 "==============================================================================
 " Language Specific
