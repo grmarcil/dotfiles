@@ -94,10 +94,6 @@ nnoremap <leader>bd :Bdelete<CR>
 nnoremap <leader>w :FixWhitespace<CR>
 " Kill search highlighting
 nnoremap <silent> <leader>h :noh<CR>
-" Sessions
-nnoremap <leader>ms :mksession!<CR>
-nnoremap <leader>ss :so Session.vim<CR>
-nnoremap <leader>gt :GitGutterToggle<CR>
 " LaTeX (rubber) macro for compiling
 " (http://brianbuccola.com/leaving-vim-latex-for-rubber-and-ultisnips/)
 nnoremap <leader>xl :w<CR>:!rubber --pdf --warn all %<CR>
@@ -105,8 +101,8 @@ nnoremap <leader>xl :w<CR>:!rubber --pdf --warn all %<CR>
 nnoremap <leader>z :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
       \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
       \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-" Make Esc work as usual in vim from insert mode in terminal emulator
-:tnoremap <Esc> <C-\><C-n>
+" More memorable ESC mapping in terminal mode
+:tnoremap <C-e> <C-\><C-n>
 
 "==============================================================================
 " Neovim python sources

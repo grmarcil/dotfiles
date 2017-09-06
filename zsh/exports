@@ -18,4 +18,4 @@ export GIT_EDITOR='nvim'
 export LC_COLLATE=C
 
 # FORCES PRO python lib
-export PYTHONPATH="~/matlab/FORCES_PRO_v1_6:${PYTHONPATH}"
+export PYTHONPATH="${HOME}/matlab/FORCES_PRO_v1_6:${PYTHONPATH}"
