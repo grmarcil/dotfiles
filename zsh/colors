@@ -19,6 +19,7 @@ unset LSCOLORS
 # Main change, you can see directories on a dark background
 #expor tLSCOLORS=gxfxcxdxbxegedabagacad
 
+export TERM=xterm-256color
 if [[ $IS_MAC -eq 1 ]]; then
     export CLICOLOR=1
     export LSCOLORS=exfxcxdxbxegedabagacad
