@@ -32,6 +32,14 @@ set scrolloff=1                 " At least 1 visible line above/below cursor
 set nojoinspaces                " J joins sentences with one space not two
 set updatetime=1000             " Faster updates w/ commands waiting for user pause
 set mouse=a
+if has('persistent_undo')
+  let g:myUndoDir = expand('$HOME/.cache/vimundo')
+  " Create dirs
+  call system('mkdir ' . expand('$HOME/cache'))
+  call system('mkdir ' . g:myUndoDir)
+  let &undodir = g:myUndoDir
+  set undofile
+endif
 
 "==============================================================================
 " Statusline

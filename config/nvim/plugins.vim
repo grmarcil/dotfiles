@@ -10,6 +10,7 @@ Plug 'tmhedberg/matchit'                 " Extends % matching
 Plug 'bronson/vim-trailing-whitespace'   " Clean up trailing whitespace
 Plug 'junegunn/vim-peekaboo'             " Show register drawer on \" and @
 Plug 'moll/vim-bbye'                     " Better buffer closing
+Plug 'mbbill/undotree'                   " Visualizer :UndotreeToggle
 
 "==============================================================================
 " Code Quality Plugins
@@ -47,6 +48,7 @@ call plug#end()                          " Automatically calls indent on/syntax 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 
+let g:gutentags_cache_dir = '~/.cache/ctags'
 " Don't run linter while typing
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
