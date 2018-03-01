@@ -29,8 +29,8 @@ Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " Requires fzf installed by 
 Plug 'christoomey/vim-tmux-navigator'    " See readme for tmux.conf reqs
 Plug 'konfekt/fastfold'                  " Don't update folds in insert mode
 Plug 'tpope/vim-fugitive'                " Git wrapper
-Plug 'tpope/vim-vinegar'                 " Netrw extensions (file browsing)
-Plug 'justinmk/vim-dirvish'              " Directory viewer
+Plug 'scrooloose/nerdtree'               " Directory view drawer
+Plug 'Aldlevine/nerdtree-git-plugin'       " Git symbols for nerdtree
 
 "==============================================================================
 " Language Specific
@@ -47,6 +47,8 @@ call plug#end()                          " Automatically calls indent on/syntax 
 "------------------------------------------------------------------------------
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
+
+let g:NERDTreeShowGitStatus = 1
 
 let g:gutentags_cache_dir = '~/.cache/ctags'
 " Don't run linter while typing

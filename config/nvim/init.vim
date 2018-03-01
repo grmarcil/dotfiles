@@ -95,8 +95,15 @@ nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fp :Files
 nnoremap <leader>fm :Marks<CR>
 nnoremap <leader>fl :BLines<CR>
+" Fugitive shortcuts
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gb :Gblame<CR>
 " BDelete to close buffers but not windows
 nnoremap <leader>bd :Bdelete<CR>
+" NERDTree toggle
+nnoremap <leader>nt :NERDTreeToggle<CR>
 " FixWhitespace shortcut
 nnoremap <leader>w :FixWhitespace<CR>
 " Kill search highlighting
