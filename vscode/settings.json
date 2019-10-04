@@ -1,0 +1,31 @@
+{
+    "workbench.colorTheme": "Solarized Dark",
+    "window.zoomLevel": 1,
+    "workbench.startupEditor": "welcomePage",
+    "gitlens.hovers.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.details": false,
+    "gitlens.hovers.currentLine.changes": false,
+    "gitlens.hovers.enabled": true,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.remotes": [
+        {
+            "domain": "git.zooxlabs.com",
+            "type": "GitHub"
+        }
+    ],
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "editor.occurrencesHighlight": false,
+    "vim.hlsearch": true,
+    "vim.leader": " ",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "h"],
+            "commands": [
+                ":noh"
+            ]
+        },
+    ],
+    "editor.lineNumbers": "relative"
+}
