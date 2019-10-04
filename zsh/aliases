@@ -15,9 +15,9 @@ alias l='git log --graph --oneline --decorate --all --show-signature'
 
 alias nv='nvim'
 
-# -------------------------------------------------------------------
-# directory information
-# -------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# Directory information
+# -----------------------------------------------------------------------------
 if [[ $IS_MAC -eq 1 ]]; then
     alias ll='ls -GFhl'  # Colorize output, add file type indicator, and put sizes in human readable format
     alias la='ls -GFlah' # Same as above, but show all

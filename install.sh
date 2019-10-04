@@ -16,3 +16,10 @@ for filename in ${configfiles[@]}
 do
   ln -sfn $DIR/config/$filename ~/.config/$filename
 done
+
+# Install VSCode settings.json config
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  ln -sfn $DIR/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+else
+  ln -sfn $DIR/vscode/settings.json ~/.config/Code/User/settings.json
+fi

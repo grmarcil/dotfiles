@@ -32,6 +32,7 @@ set scrolloff=1                 " At least 1 visible line above/below cursor
 set nojoinspaces                " J joins sentences with one space not two
 set updatetime=1000             " Faster updates w/ commands waiting for user pause
 set mouse=a
+set guicursor=                  " Fix symbol printing bug with some linux terminal emulators
 if has('persistent_undo')
   let g:myUndoDir = expand('$HOME/.cache/vimundo')
   " Create dirs
@@ -77,10 +78,8 @@ if exists('+colorcolumn')       " Marks the 80th character column
 endif
 set textwidth=80
 set formatoptions-=t
-colorscheme flattened_light
+colorscheme flattened_dark
 set cursorline
-set foldmethod=indent
-set foldnestmax=2
 
 "==============================================================================
 " Key Mappings
@@ -126,7 +125,7 @@ if has('mac')
   let g:python3_host_prog='/usr/local/bin/python3'
 elseif has('unix')
   let g:python_host_prog='/usr/bin/python'
-  let g:python3_host_prog='/usr/bin/python3'
+  let g:python3_host_prog='/usr/bin/python3.6'
 endif
 
 "==============================================================================

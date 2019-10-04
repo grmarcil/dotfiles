@@ -25,7 +25,12 @@ Plug 'ludovicchabant/vim-gutentags'      " Manages tag files
 "==============================================================================
 " Utility and Misc Plugins
 "------------------------------------------------------------------------------
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " Requires fzf installed by homebrew
+if has('mac')
+  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " Requires fzf installed by homebrew
+elseif has('unix')
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+endif
 Plug 'christoomey/vim-tmux-navigator'    " See readme for tmux.conf reqs
 Plug 'konfekt/fastfold'                  " Don't update folds in insert mode
 Plug 'tpope/vim-fugitive'                " Git wrapper
