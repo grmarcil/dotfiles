@@ -1,8 +1,19 @@
 # vi: set ft=sh :
 
+vscode-remote() {
+  if [[ -d $1 ]]; then
+    ssh laptop "code --folder-uri vscode-remote://ssh-remote+desktop/\"$(realpath $1)\""
+  elif [[ -f $1 ]]; then
+    ssh laptop "code --file-uri vscode-remote://ssh-remote+desktop/\"$(realpath $1)\""
+  else
+    echo "$1 is not a valid file or folder"
+  fi
+}
+
 alias reload='source ~/dotfiles/zsh/aliases'
 alias h=history
 alias hgrep='history | grep'
+alias grep='grep --color=auto'
 
 alias g=git
 alias s='git status'
@@ -13,7 +24,14 @@ alias a='git add'
 alias c='git commit'
 alias l='git log --graph --oneline --decorate --all --show-signature'
 
-alias nv='nvim'
+
+# -----------------------------------------------------------------------------
+# Directory information
+# -----------------------------------------------------------------------------
+alias tls='tmux list-sessions'
+ta() {
+  tmux attach -t "$1"
+ }
 
 # -----------------------------------------------------------------------------
 # Directory information

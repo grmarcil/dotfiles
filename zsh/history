@@ -1,7 +1,7 @@
 # vi: set ft=sh :
 
 # HISTORY
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=100000
+SAVEHIST=100000
 HISTFILE=~/.zsh_history
 setopt histignorespace

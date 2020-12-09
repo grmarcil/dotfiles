@@ -21,3 +21,8 @@ alias ea='vim -v ~/dotfiles/bash/aliases && reload'
 alias eg='vim ~/.gitconfig'
 
 alias dot='cd ~/dotfiles'
+
+alias tls='tmux list-sessions'
+ta() {
+  tmux attach -t "$1"
+}
