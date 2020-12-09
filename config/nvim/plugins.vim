@@ -51,9 +51,12 @@ call plug#end()                          " Automatically calls indent on/syntax 
 " Plugin Configuration
 "------------------------------------------------------------------------------
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
 
 let g:NERDTreeShowGitStatus = 1
+
+if !executable('ctags')
+  let g:gutentags_dont_load = 1
+endif
 
 let g:gutentags_cache_dir = '~/.cache/ctags'
 " Don't run linter while typing
