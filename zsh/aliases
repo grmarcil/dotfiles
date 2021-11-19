@@ -24,6 +24,9 @@ alias a='git add'
 alias c='git commit'
 alias l='git log --graph --oneline --decorate --all --show-signature'
 
+# run from cruise/cruise root to generate compile_commands.json and enable
+# intellisense features in VS Code
+alias vscode_completion='./tools/generate_compilation_database.py'
 
 # -----------------------------------------------------------------------------
 # Directory information

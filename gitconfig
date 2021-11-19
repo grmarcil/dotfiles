@@ -22,3 +22,6 @@
 
 [merge]
 	tool = vimdiff
+[user]
+	name = Greg Marcil
+	email = greg.marcil@getcruise.com

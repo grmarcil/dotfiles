@@ -11,7 +11,6 @@ source ~/dotfiles/zsh/aliases
 source ~/dotfiles/zsh/bindkeys
 source ~/dotfiles/zsh/history
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# source ~/src/zaw/zaw
 
 if [ -z "$GIT_AUTHOR_NAME" ]; then
   source ~/dotfiles/bash/git_identity
